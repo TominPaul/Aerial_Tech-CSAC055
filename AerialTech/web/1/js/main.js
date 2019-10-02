@@ -9,7 +9,7 @@ function createCaptcha() {
   for (var i = 0; i < lengthOtp; i++) {
     //below code will not allow Repetition of Characters
     var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
-    if (captcha.indexOf(charsArray[index]) == -1)
+    if (captcha.indexOf(charsArray[index]) === -1)
       captcha.push(charsArray[index]);
     else i--;
   }
@@ -27,8 +27,8 @@ function createCaptcha() {
 function validateCaptcha() {
   event.preventDefault();
   debugger
-  if (document.getElementById("cpatchaTextBox").value == code) {
-    alert("Valid Captcha")
+  if (document.getElementById("cpatchaTextBox").value === code) {
+    alert("Valid Captcha");
   }else{
     alert("Invalid Captcha. try Again");
     createCaptcha();

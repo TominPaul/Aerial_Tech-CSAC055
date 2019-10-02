@@ -22,7 +22,7 @@
     
     <body>
         <div class="main">
-            <!-- Sing in  Form -->
+            <!-- Login  Form -->
             <section class="sign-in">
                 <div class="container">
                     <div class="signin-content">
@@ -57,6 +57,7 @@
                 </div>
             </section>
         </div>
+        
         <!-- JS -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="js/main.js"></script>
