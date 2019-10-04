@@ -11,13 +11,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Sign up</title>               
+        <title>Sign_up</title>               
 
         <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
         <!-- Main css -->
         <link rel="stylesheet" href="css/style.css">
+        
+        <!-- JS -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        
     </head>
     <body onload="createCaptcha()">   
         <div class="main">
@@ -69,12 +73,10 @@
                             <form action="" method="post">
                                 <div class="g-recaptcha" data-sitekey="6Lc3JLsUAAAAAAB5OmYvKh0aV2yAebBH2Bebd8O3"></div>
                                 </br>
-                            </form>
- 
-                            <!--js-->
-                            <script src='https://www.google.com/recaptcha/api.js'></script>
+                            </form>                            
                             
                             <a href="Login.jsp" class="signup-image-link">I am already member</a>
+                            
                         </div>
                     </div>
                 </div>

@@ -83,8 +83,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div>\n");
       out.write("                                <div class=\"form-group\">\n");
       out.write("                                    <input type=\"checkbox\" name=\"remember-me\" id=\"remember-me\" class=\"agree-term\" />\n");
-      out.write("                                    <label for=\"remember-me\" class=\"label-agree-term\"><span><span></span></span>Remember me. </label> \n");
-      out.write("                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n");
+      out.write("                                    <label for=\"remember-me\" class=\"label-agree-term\"><span><span></span></span>Remember me. </label>                                    \n");
       out.write("                                    <a href=\"#\" class=\"label-agree-term\"> Forgot password?</a>\n");
       out.write("                                </div>                                \n");
       out.write("                                <div class=\"form-group form-button\">\n");
