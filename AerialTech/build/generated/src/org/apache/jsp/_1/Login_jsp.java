@@ -72,7 +72,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                        <div class=\"signin-form\">\r\n");
       out.write("                            <h2 class=\"form-title\">Log In</h2>\r\n");
-      out.write("                            <form method=\"POST\" class=\"register-form\" id=\"login-form\">\r\n");
+      out.write("                           <form action=\"../process/loginpr.jsp\" method=\"post\" name=\"form1\">\r\n");
       out.write("                                <div class=\"form-group\">\r\n");
       out.write("                                    <label for=\"your_name\"><i class=\"zmdi zmdi-account material-icons-name\"></i></label>\r\n");
       out.write("                                    <input type=\"text\" name=\"your_name\" id=\"your_name\" placeholder=\"Username\"/>\r\n");

@@ -11,8 +11,8 @@
                  
                       DBConnection ob = new DBConnection();
                       String type = null;
-                          String username = request.getParameter("u_name");
-                          String password = request.getParameter("password");
+                          String username = request.getParameter("your_name");
+                          String password = request.getParameter("your_pass");
                           ResultSet rs = ob.select("select * from user where u_name='" + username + "' and password='" + password + "'");
                           System.out.println("Query="+ username+" "+password);
                           if (rs.next()) {
@@ -21,14 +21,14 @@
                               System.out.println(rs);
                               
                                   
-                                  response.sendRedirect("../1/main.jsp");
+                                  response.sendRedirect("../1/Main_Page.jsp");
                               
                               }
                 else{
                       %>
                       <script>
                           alert("Invalid Login.. try again");
-                          window.location="../index.jsp";
+                          window.location="../Signup.jsp";
                       </script>
                       <%
                 }

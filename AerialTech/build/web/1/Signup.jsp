@@ -31,7 +31,7 @@
                     <div class="signup-content">
                         <div class="signup-form">
                             <h2 class="form-title">Sign Up</h2>
-                            <form method="POST" class="register-form" id="register-form">
+                             <form action="../process/signup_pr.jsp" method="post" name="form1">
                                 <div class="form-group">
                                     <label for="f_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="text" name="f_name" id="f_name" placeholder="First Name"/>
