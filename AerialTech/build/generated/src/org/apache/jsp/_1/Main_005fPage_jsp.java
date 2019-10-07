@@ -93,7 +93,7 @@ public final class Main_005fPage_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("        <div class=\"w3-container\" align=\"center\">\r\n");
       out.write("            <figure>\r\n");
       out.write("                <img src=\"images/AerialTech_Logo.png\" alt=\"Main_Logo\" align=\"center\">                      \r\n");
-      out.write("                <a href=\"Login.jsp\" class=\"right-half\" style=\"width:1%\">Logout</a>\r\n");
+      out.write("                <td width=\"42\" rowspan=\"3\"><a href=\"logout.jsp\" title=\"Logout\" class=\"fade\"><img style=\"width:40px; height:40px;\"   width=\"156px\" height=\"177px\"></a></td>\r\n");
       out.write("            </figure>            \r\n");
       out.write("            </br></br>\r\n");
       out.write("        </div>\r\n");
