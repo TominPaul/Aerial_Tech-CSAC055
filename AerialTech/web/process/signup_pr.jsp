@@ -1,7 +1,7 @@
 <%-- 
-    Document   : UpdateRateSupport
-    Created on : 26 Sep, 2014, 9:28:18 AM
-    Author     : Administrator
+    Document   : signup_pr
+    Created on : Oct 7, 2019, 10:14:23 AM
+    Author     : VISHNU
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +17,7 @@
         <%
             
                     if(con.putData(1)>0){
-                        response.sendRedirect("../1/Login.jsp");
+                        response.sendRedirect("../login.jsp");
                     }
                
         %>

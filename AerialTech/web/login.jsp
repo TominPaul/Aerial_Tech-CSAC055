@@ -28,12 +28,12 @@
                     <div class="signin-content">
                         <div class="signin-image">
                             <figure><img src="images/AerialTech_Logo.png" alt="sing in image"></figure>
-                            <a href="Signup.jsp" class="signup-image-link">Create an account</a>
+                            <a href="signup.jsp" class="signup-image-link">Create an account</a>
                         </div>
 
                         <div class="signin-form">
                             <h2 class="form-title">Log In</h2>
-                           <form action="../process/loginpr.jsp" method="post" name="form1">
+                           <form action="process/loginpr.jsp" method="post" name="form1">
                                 <div class="form-group">
                                     <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="text" name="your_name" id="your_name" placeholder="Username"/>

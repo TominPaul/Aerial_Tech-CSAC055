@@ -43,9 +43,9 @@
         <!-- Sidebar -->
         <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
             <h3 class="w3-bar-item"></h3>
-            <a href="Main_Page.jsp" class="w3-bar-item w3-button">Home</a>
-            <a href="#" class="w3-bar-item w3-button">Category</a>
-            <a href="#" class="w3-bar-item w3-button">Products</a>
+            <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
+            <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
+            <a href="products_page.jsp" class="w3-bar-item w3-button">Products</a>
         </div>
 
         <!-- Page Content -->
@@ -54,7 +54,7 @@
         <div class="w3-container" align="center">
             <figure>
                 <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
-                <td width="42" rowspan="3"><a href="logout.jsp" title="Logout" class="fade"><img style="width:40px; height:40px;"   width="156px" height="177px"></a></td>
+                <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
             </figure>            
             </br></br>
         </div>
