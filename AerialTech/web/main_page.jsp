@@ -54,7 +54,7 @@
         <div class="w3-container" align="center">
             <figure>
                 <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
-                <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
+                <a href="logout.jsp" title="Logout" style="opacity: 0.8; -moz-opacity: 0.8;" class="fade">logout </a>
             </figure>            
             </br></br>
         </div>
