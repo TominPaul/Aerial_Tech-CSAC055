@@ -15,19 +15,17 @@
     ResultSet rs = ob.select("select * from user where u_name='" + username + "' and password='" + password + "'");
     System.out.println("Query="+ username+" "+password);
     
-    if (rs.next()) {
+    if (rs.next())  {
         session.setAttribute("u_name", rs.getString(1));
         System.out.println(rs);
         response.sendRedirect("../main_page.jsp");
     }
-    else{
-%>
-<script>
-alert("Invalid Login.. try again");
-window.location="../Signup.jsp";
-</script>
-<%
-}
-           
-                   
+    else  {
+        %>
+        <script>
+            alert("Invalid Login.. try again");
+            window.location="../Signup.jsp";
+        </script>
+        <%
+    }                             
 %>
