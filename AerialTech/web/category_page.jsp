@@ -5,12 +5,15 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
 <!DOCTYPE html>
 <html>
-    <head>                
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>   
+         <jsp:useBean id="con" class="beanfiles.Category"/> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Category_Page</title>
         
@@ -121,10 +124,15 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
+                           <%          Vector v=null;
+                    Iterator it=con.getData(2).iterator();
+                    while(it.hasNext()){
+                        v=(Vector)it.next();
+        %>
                         <tbody>
                             <tr>
-                                <td>CTID001</td>
-                                <td>Drones</td>
+                                <td id="c_id"><%out.print(v.get(0)); %> </td>
+                                <td id="c_name"><%out.print(v.get(1)); %></td>
                                 <td>
                                     <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                 </td>
@@ -132,27 +140,9 @@
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>CTID002</td>
-                                <td>Drone Controllers</td>
-                                <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
-                                </td>
-                                <td>
-                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>CTID003</td>
-                                <td>Accessories</td>
-                                <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
-                                </td>
-                                <td>
-                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                </td>
-                            </tr>      
+                            
                         </tbody>
+                        <%}%>
                     </table>
                 </div>
             </div>
