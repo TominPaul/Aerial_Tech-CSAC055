@@ -8,15 +8,21 @@
 <!DOCTYPE html>
 <html>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 =======
+=======
+>>>>>>> parent of 5330169... Week_#6_Phase_2
     <head>                
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
+>>>>>>> parent of 5330169... Week_#6_Phase_2
+=======
 >>>>>>> parent of 5330169... Week_#6_Phase_2
         
         <title>Category_Page</title>
@@ -41,6 +47,9 @@
 =======
     </head>
     <style type="text/css">
+<<<<<<< HEAD
+>>>>>>> parent of 5330169... Week_#6_Phase_2
+=======
 >>>>>>> parent of 5330169... Week_#6_Phase_2
 
         table {
