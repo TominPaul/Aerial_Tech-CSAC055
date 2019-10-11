@@ -41,7 +41,7 @@
     </head>
     <body>           
         <!-- Sidebar -->
-        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
             <h3 class="w3-bar-item"></h3>
             <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
             <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
@@ -49,16 +49,15 @@
         </div>
 
         <!-- Page Content -->
-        <div style="margin-left:10%">
-
-        <div class="w3-container" align="center">
+        
+        <div class="w3-container" align="center" style="padding: 2%">
             <figure>
                 <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
-                <a href="logout.jsp" title="Logout" style="opacity: 0.8; -moz-opacity: 0.8;" class="fade">logout </a>
+                <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
             </figure>            
             </br></br>
         </div>
-            
+
         <div align="right" class="form-group form-button" style="margin-right:10%">
             <h2 class="form-title" align="left" style="margin-left:5%"><b>Inventory Details</b></h2>
             <input type="submit" name="Add Category" id="btn_AddCategory" class="form-submit" value="Add Category"/>
@@ -122,8 +121,6 @@
                     </tr>
                 </table>
             </div>
-        </div>
-
         </div>
         
         <!-- JS -->

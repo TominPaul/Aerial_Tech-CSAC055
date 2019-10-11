@@ -22,7 +22,7 @@
          <link rel="stylesheet" href="css/style.css">
 
         <!-- Main css -->
-        <link rel="stylesheet" href="css/style_MainPage.css">
+        <link rel="stylesheet" href="css/style_CategoryPage.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -33,6 +33,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
+<<<<<<< HEAD
     <style type="text/css">
 
         table {
@@ -92,10 +93,12 @@
         }
         
     </style>   
+=======
+>>>>>>> 8dc12e21977de23151b5847d28d32f78a8c1e29d
 
     <body>
         <!-- Sidebar -->
-        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
             <h3 class="w3-bar-item"></h3>
             <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
             <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
@@ -104,6 +107,7 @@
 
         <!-- Page Content -->
         
+<<<<<<< HEAD
         <div>
             <div class="w3-container" align="center">
                 <figure>
@@ -119,6 +123,17 @@
                 <div class="container">
                     <div class="signin-content">
         <div align="left" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+=======
+        <div class="w3-container" align="center" style="padding: 2%">
+            <figure>
+                <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
+                <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
+            </figure>            
+            </br></br>
+        </div>        
+
+        <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+>>>>>>> 8dc12e21977de23151b5847d28d32f78a8c1e29d
             <h2 class="form-title" align="left"><b>Category List</b></h2>
             <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
             </br>                    
@@ -138,7 +153,9 @@
                     while(it.hasNext()){
                         v=(Vector)it.next();
         %>
-                        <tbody>
+                    
+        
+        <tbody>
                             <tr>
                                 <td id="c_id"><%out.print(v.get(0)); %> </td>
                                 <td id="c_name"><%out.print(v.get(1)); %></td>
