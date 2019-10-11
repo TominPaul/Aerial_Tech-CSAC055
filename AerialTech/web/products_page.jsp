@@ -7,12 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.Vector"%>
 <%@page import="java.util.Iterator"%>
+
+<%@page import="DBConnection.DBConnection"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Products_Page</title>    
-	<jsp:useBean id="con" class="beanfiles.Category"/>
+	<jsp:useBean id="con" class="beanfiles.Product"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">       
@@ -71,14 +74,30 @@
                         </thead>
                         <%	
                             Vector v=null;
-                            Iterator it=con.getData(5).iterator();
+                            Iterator it=con.getData(2).iterator();
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
+                          <%
+                                                            
+                                                            
+                                                                DBConnection ob = new DBConnection();
+                                                                ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id=product.c_id");
+                                                                System.out.print(rs);
+                                                                if (rs.next()) 
+																{
+
+                                                            %>
                         <tbody>
                             <tr>
-                                <td id="c_id"><%out.print(v.get(0)); %> </td>
-                                <td id="c_name"><%out.print(v.get(1)); %></td>
+                                <td id="P_id"><%out.print(v.get(0)); %> </td>
+                                <td id="category"><%=rs.getString(1)%></td>
+                                 <td id="p_name"><%out.print(v.get(1)); %></td>
+                                 <td id="price"><%out.print(v.get(2)); %></td>
+                                                
+                                <td id="quantity"><%out.print(v.get(2)); %></td> 
+                                
+                                
                                 <td>
                                     <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                 </td>
@@ -87,6 +106,7 @@
                                 </td>
                             </tr>                            
                         </tbody>
+                        <%}%>
                         <%}%>
                     </table>                    
                 </div>
