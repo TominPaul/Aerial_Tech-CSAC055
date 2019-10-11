@@ -107,12 +107,7 @@
         
 
       
-         <div class="main">
-            <!-- Login  Form -->
-            <section class="sign-in">
-                <div class="container">
-                    <div class="signin-content">
-        <div align="left" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+      
 
         <div class="w3-container" align="center" style="padding: 2%">
             <figure>
