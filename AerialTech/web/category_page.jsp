@@ -9,19 +9,20 @@
 <%@page import="java.util.Iterator"%>
 <!DOCTYPE html>
 <html>
-    <head>                
-	<jsp:useBean id="con" class="beanfiles.Category"/>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>   
+         <jsp:useBean id="con" class="beanfiles.Category"/> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Category</title>
+        <title>Category_Page</title>
         
         <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+         <link rel="stylesheet" href="css/style.css">
 
         <!-- Main css -->
-        <link rel="stylesheet" href="css/style_MainPage.css">
+        <link rel="stylesheet" href="css/style_CategoryPage.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -32,6 +33,66 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
+   
+    <style type="text/css">
+
+        table {
+        text-align: center;
+        line-height: 40px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 2px solid #ed1c40;
+        width: max-content;
+        margin: 50px auto;
+        border-radius: .25rem;
+        padding:0;
+        }
+
+        thead tr:first-child {
+        background: #044266;
+        color: #fff;
+        border: none;
+        }
+
+        th:first-child,
+        td:first-child {
+        padding: 0 15px 0 20px;
+        }
+
+        th {
+        font-weight: 500;
+        text-align: center;
+        }
+
+        thead tr:last-child th {
+        border-bottom: 3px solid #ddd;
+        }
+
+        tbody tr:hover {
+        background-color: #f2f2f2;
+        cursor: default;
+        }
+
+        tbody td {
+        border-bottom: 1px solid #ddd;
+        }
+
+        .button {
+        color: #aaa;
+        cursor: pointer;
+        vertical-align: middle;
+        margin-top: -4px;
+        }
+
+        .edit:hover {
+        color: #0a79df;
+        }
+
+        .delete:hover {
+        color: #dc2a2a;
+        }
+        
+    </style>   
 
     <body>
         <!-- Sidebar -->
@@ -42,7 +103,12 @@
             <a href="products_page.jsp" class="w3-bar-item w3-button">Products</a>
         </div>
 
-        <!-- Page Content -->        
+        <!-- Page Content -->
+        
+
+      
+      
+
         <div class="w3-container" align="center" style="padding: 2%">
             <figure>
                 <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
@@ -52,10 +118,11 @@
         </div>        
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+
             <h2 class="form-title" align="left"><b>Category List</b></h2>
             
             <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
-            </br>                                   
+            </br>                    
             <div class="container">
                 <div class="table-wrapper">
                     <table class="table table-bordered">
@@ -67,13 +134,14 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <%	
-                            Vector v=null;
-                            Iterator it=con.getData(2).iterator();
-                            while(it.hasNext()){
-                                v=(Vector)it.next();
-                        %>
-                        <tbody>
+                           <%          Vector v=null;
+                    Iterator it=con.getData(2).iterator();
+                    while(it.hasNext()){
+                        v=(Vector)it.next();
+        %>
+                    
+        
+        <tbody>
                             <tr>
                                 <td id="c_id"><%out.print(v.get(0)); %> </td>
                                 <td id="c_name"><%out.print(v.get(1)); %></td>
@@ -83,10 +151,11 @@
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                 </td>
-                            </tr>                            
+                            </tr>
+                            
                         </tbody>
                         <%}%>
-                    </table>                    
+                    </table>
                 </div>
             </div>
         </div>
