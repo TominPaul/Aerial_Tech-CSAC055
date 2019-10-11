@@ -1,6 +1,6 @@
 <%-- 
-    Document   : products_page
-    Created on : Oct 7, 2019, 10:14:23 AM
+    Document   : Category_List
+    Created on : Oct 7, 2019, 8:35:55 AM
     Author     : TOMIN
 --%>
 
@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <title>Products</title>
+        <title>Category</title>
         
         <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -52,26 +52,23 @@
         </div>        
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
-            <h2 class="form-title" align="left"><b>Product List</b></h2>
-            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Product</button>
+            <h2 class="form-title" align="left"><b>Category List</b></h2>
+            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
             </br>                                   
             <div class="container">
                 <div class="table-wrapper">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Product ID</th>
-                                <th>Category</th>
-                                <th>Product Name</th>                        
-                                <th>Sales Price</th>
-                                <th>Available Quantity</th>
+                                <th>Category ID</th>
+                                <th>Category Name</th>                        
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <%	
                             Vector v=null;
-                            Iterator it=con.getData(5).iterator();
+                            Iterator it=con.getData(2).iterator();
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
