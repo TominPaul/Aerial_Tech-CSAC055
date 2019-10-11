@@ -33,7 +33,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-<<<<<<< HEAD
+   
     <style type="text/css">
 
         table {
@@ -93,8 +93,6 @@
         }
         
     </style>   
-=======
->>>>>>> 8dc12e21977de23151b5847d28d32f78a8c1e29d
 
     <body>
         <!-- Sidebar -->
