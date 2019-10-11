@@ -19,6 +19,7 @@
         
         <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+         <link rel="stylesheet" href="css/style.css">
 
         <!-- Main css -->
         <link rel="stylesheet" href="css/style_MainPage.css">
@@ -37,16 +38,17 @@
         table {
         text-align: center;
         line-height: 40px;
-        border-collapse: separate;
+        border-collapse: collapse;
         border-spacing: 0;
         border: 2px solid #ed1c40;
         width: max-content;
         margin: 50px auto;
         border-radius: .25rem;
+        padding:0;
         }
 
         thead tr:first-child {
-        background: #ed1c40;
+        background: #044266;
         color: #fff;
         border: none;
         }
@@ -58,6 +60,7 @@
 
         th {
         font-weight: 500;
+        text-align: center;
         }
 
         thead tr:last-child th {
@@ -100,6 +103,7 @@
         </div>
 
         <!-- Page Content -->
+        
         <div>
             <div class="w3-container" align="center">
                 <figure>
@@ -109,7 +113,12 @@
                 </br></br>
             </div>        
         </div>
-        <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+         <div class="main">
+            <!-- Login  Form -->
+            <section class="sign-in">
+                <div class="container">
+                    <div class="signin-content">
+        <div align="left" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Category List</b></h2>
             <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
             </br>                    
