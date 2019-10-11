@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2019, 10:50:17 AM
+    Author     : TOMIN
+*/
+
+.left-half {    
+    position: absolute;
+    left: 15%;
+    width: 39%;
+}
+
+.right-half {
+    position: absolute;
+    right: 5%;
+}
+
+table {
+    text-align: center;    
+    margin: 50px auto;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: .25rem;
+}
+
+thead tr:first-child {
+    background: #000032;        
+    color: #fff;   
+}
+
+thead th {
+    text-align: center;
+    font-weight: 500;
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: default;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.button {
+    color: #aaa;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+.edit:hover {
+    color: #000032;
+}
+
+.delete:hover {
+    color: #ff0000;
+}
