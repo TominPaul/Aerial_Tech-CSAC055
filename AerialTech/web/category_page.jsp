@@ -53,6 +53,7 @@
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Category List</b></h2>
+            
             <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
             </br>                                   
             <div class="container">
