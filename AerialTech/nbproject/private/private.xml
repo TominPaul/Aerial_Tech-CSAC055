@@ -2,13 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/D:/LAMBTON/WIL-PROJECT/Aerial_Tech-CSAC055/AerialTech/web/category_page.jsp</file>
-            <file>file:/D:/LAMBTON/WIL-PROJECT/Aerial_Tech-CSAC055/AerialTech/nbproject/build-impl.xml</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/src/java/beanfiles/Product.java</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/src/java/beanfiles/Category.java</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/category_page.jsp</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/src/java/DBConnection/DBConnection.java</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/src/java/DBConnection/DbConnection1.java</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/login.jsp</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/process/signup_pr.jsp</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/products_edit.jsp</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/products_add.jsp</file>
         </group>
->>>>>>> 8dc12e21977de23151b5847d28d32f78a8c1e29d
     </open-files>
 </project-private>
