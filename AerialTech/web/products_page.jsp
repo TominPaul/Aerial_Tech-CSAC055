@@ -10,12 +10,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Products_Page</title>    
 	<jsp:useBean id="con" class="beanfiles.Category"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">       
+        <title>Products_Page</title>    
         
         <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -53,7 +52,7 @@
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Product List</b></h2>
-            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Product</button>
+            <a href="products_add.jsp"><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Product</button></a>
             </br>                                   
             <div class="container">
                 <div class="table-wrapper">
