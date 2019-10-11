@@ -7,23 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    
+    <head>                
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-=======
-=======
->>>>>>> parent of 5330169... Week_#6_Phase_2
-    <head>                
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
->>>>>>> parent of 5330169... Week_#6_Phase_2
-=======
->>>>>>> parent of 5330169... Week_#6_Phase_2
         
         <title>Category_Page</title>
         
@@ -31,7 +18,7 @@
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
         <!-- Main css -->
-        <link rel="stylesheet" href="css/style_MainPage.css">
+        <link rel="stylesheet" href="css/style_CategoryPage.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -41,76 +28,11 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-    
-    <style>
-=======
     </head>
-    <style type="text/css">
-<<<<<<< HEAD
->>>>>>> parent of 5330169... Week_#6_Phase_2
-=======
->>>>>>> parent of 5330169... Week_#6_Phase_2
-
-        table {
-        text-align: center;
-        line-height: 40px;
-        border-collapse: separate;
-        border-spacing: 0;
-        border: 2px solid #ed1c40;
-        width: max-content;
-        margin: 50px auto;
-        border-radius: .25rem;
-        }
-
-        thead tr:first-child {
-        background: #ed1c40;
-        color: #fff;
-        border: none;
-        }
-
-        th:first-child,
-        td:first-child {
-        padding: 0 15px 0 20px;
-        }
-
-        th {
-        font-weight: 500;
-        }
-
-        thead tr:last-child th {
-        border-bottom: 3px solid #ddd;
-        }
-
-        tbody tr:hover {
-        background-color: #f2f2f2;
-        cursor: default;
-        }
-
-        tbody td {
-        border-bottom: 1px solid #ddd;
-        }
-
-        .button {
-        color: #aaa;
-        cursor: pointer;
-        vertical-align: middle;
-        margin-top: -4px;
-        }
-
-        .edit:hover {
-        color: #0a79df;
-        }
-
-        .delete:hover {
-        color: #dc2a2a;
-        }
-        
-    </style>   
 
     <body>
         <!-- Sidebar -->
-        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
             <h3 class="w3-bar-item"></h3>
             <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
             <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
@@ -118,15 +40,15 @@
         </div>
 
         <!-- Page Content -->
-        <div>
-            <div class="w3-container" align="center">
-                <figure>
-                    <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
-                    <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
-                </figure>            
-                </br></br>
-            </div>        
-        </div>
+        
+        <div class="w3-container" align="center" style="padding: 2%">
+            <figure>
+                <img src="images/AerialTech_Logo.png" alt="Main_Logo" align="center">                      
+                <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
+            </figure>            
+            </br></br>
+        </div>        
+
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Category List</b></h2>
             <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button>
