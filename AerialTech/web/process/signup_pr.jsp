@@ -9,24 +9,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>signup_pr</title>
         <jsp:useBean id="con" class="beanfiles.Signup"/>
         <jsp:setProperty name="con" property="*"/>
     </head>
     <body>
-        <%
-            
-                    if(con.putData(1)>0){
-                        
-                        response.sendRedirect("../login.jsp");
-                        %>
-                        <script>
-                            window.alert("Registration Successfull");
-                            </script>
-                                                    <%
-                        
-                    }
-               
+        <%            
+            if(con.putData(1)>0){      
+        %>            
+        <script>
+            window.alert("Registration Successfull");
+        </script>
+        <%                        
+                response.sendRedirect("../login.jsp");                       
+            }               
         %>
     </body>
 </html>
