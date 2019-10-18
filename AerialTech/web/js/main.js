@@ -28,7 +28,11 @@ function validateCaptcha() {
   event.preventDefault();
   debugger
   if (document.getElementById("cpatchaTextBox").value === code) {
-    alert("Valid Captcha");
+      response.sendRedirect("../main_page.jsp");
+      
+    alert("Valid Captchaaaaaaaaaaaaa");
+    
+    return true;
   }else{
     alert("Invalid Captcha. try Again");
     createCaptcha();

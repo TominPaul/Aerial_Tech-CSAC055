@@ -31,7 +31,7 @@
                     <div class="signup-content">
                         <div class="signup-form">
                             <h2 class="form-title">Sign Up</h2>
-                             <form action="process/signup_pr.jsp" method="post" name="form1">
+                            <form enctype="multipart/form-data" action="process/signup_pr.jsp" method="post" name="form1" onsubmit="return validateCaptcha(this)" >
                                 <div class="form-group">
                                     <label for="f_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="text" name="f_name" id="f_name" placeholder="First Name"/>
@@ -59,22 +59,22 @@
                                 <div class="form-group form-button">
                                     <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                                 </div>
-                            </form>
+                            
                         </div>
                         <div class="signup-image">
                             <figure><img src="images/AerialTech_Logo.png" alt="sing up image"></figure>
                             
-                            <form onsubmit="validateCaptcha()">
+                            
                                 <div id="captcha"></div>
                                 <input type="text" placeholder="Type the characters you see." id="cpatchaTextBox"/>                                
                                 </br>
-                            </form>
+                            
                             
                             <form action="" method="post">
                                 <div class="g-recaptcha" data-sitekey="6Lc3JLsUAAAAAAB5OmYvKh0aV2yAebBH2Bebd8O3"></div>
                                 </br>
                             </form>                            
-                            
+                       </form>
                             <a href="login.jsp" class="signup-image-link">I am already member</a>
                             
                         </div>
