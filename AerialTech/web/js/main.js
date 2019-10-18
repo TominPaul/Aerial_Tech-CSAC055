@@ -28,7 +28,7 @@ function validateCaptcha() {
   event.preventDefault();
   debugger
   if (document.getElementById("cpatchaTextBox").value === code) {
-      window.location("../process/signup_pr.jsp");
+      response.sendRedirect("../main_page.jsp");
       
     alert("Valid Captchaaaaaaaaaaaaa");
     
