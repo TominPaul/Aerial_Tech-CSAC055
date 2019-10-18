@@ -5,10 +5,15 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="DBConnection.DBConnection"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
     <head>  
         <jsp:useBean id="con" class="beanfiles.Category"/>
+        <jsp:useBean id="con2" class="beanfiles.Product"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -46,14 +51,15 @@
             </figure>            
             </br></br>
         </div>        
+        
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Inventory List</b></h2>
             <a href="category_add.jsp"><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Category</button></a>
             <a href="products_add.jsp"><button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add Product</button></a>
             </br>                    
-        </div>
-
+         </div>
+        <form action="post">
         <div class="w3-container">
             <div class="left-half" style="width:34%">
                 <div class="table-wrapper">
@@ -67,7 +73,26 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>                        
-                    </table>                    
+                    <%	
+                            Vector v=null;
+                            Iterator it=con.getData(2).iterator();
+                            while(it.hasNext()){
+                                v=(Vector)it.next();
+                        %>
+                        <tbody>
+                            <tr>
+                                <td id="c_id"><%out.print(v.get(0)); %> </td>
+                                <td id="c_name"><%out.print(v.get(1)); %></td>
+                                <td >
+                                    <a href="category_edit.jsp?&c_id=<%out.print(v.get(0)); %>&c_name=<%out.print(v.get(1)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                </td>
+                                <td>
+                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                        <%}%>
+                    </table>                                       
                 </div>
             </div>
             <div class="right-half" style="width:45%">
@@ -85,7 +110,43 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>                        
-                    </table>                    
+                    <%	
+                            Vector v2=null;
+                            Iterator it2=con2.getData(2).iterator();
+                            while(it2.hasNext()){
+                                v2=(Vector)it2.next();
+                        %>
+                          <%
+                                                            
+                                                            
+                                                               DBConnection ob = new DBConnection();
+                                                                ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id=product.c_id");
+                                                                System.out.print(rs);
+                                                                if (rs.next()) 
+																{
+
+                                                            %>
+                        <tbody>
+                            <tr>
+                                <td id="P_id"><%out.print(v2.get(0)); %> </td>
+                                <td id="category"><%=rs.getString(1)%></td>
+                                 <td id="p_name"><%out.print(v2.get(1)); %></td>
+                                 <td id="price"><%out.print(v2.get(2)); %></td>
+                                                
+                                <td id="quantity"><%out.print(v2.get(3)); %></td> 
+                                
+                                
+                                <td <td onclick="window.location='\product_edit.jsp'">
+                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                </td>
+                                <td>
+                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                        <%}%>
+                        <%}%>
+                    </table>                                   
                 </div>
             </div>
         </div>

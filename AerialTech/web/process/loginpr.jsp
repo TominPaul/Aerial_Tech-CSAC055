@@ -24,7 +24,7 @@
         %>
         <script>
             alert("Invalid Login.. try again");
-            window.location="../Signup.jsp";
+            window.location="../signup.jsp";
         </script>
         <%
     }                             

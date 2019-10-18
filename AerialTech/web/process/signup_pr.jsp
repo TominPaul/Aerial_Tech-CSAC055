@@ -17,7 +17,14 @@
         <%
             
                     if(con.putData(1)>0){
+                        
                         response.sendRedirect("../login.jsp");
+                        %>
+                        <script>
+                            window.alert("Registration Successfull");
+                            </script>
+                                                    <%
+                        
                     }
                
         %>

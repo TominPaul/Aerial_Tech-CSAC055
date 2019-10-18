@@ -13,13 +13,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Products_Page</title>    
+
+     
 	<jsp:useBean id="con" class="beanfiles.Product"/>
-=======
-	<jsp:useBean id="con" class="beanfiles.Category"/>
->>>>>>> 8f34c34c58f0fe89f4e4b9f2aa58e9bd2ed29e34
+	
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">       

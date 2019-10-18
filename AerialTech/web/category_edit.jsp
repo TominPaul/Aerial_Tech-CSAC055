@@ -34,6 +34,7 @@
     </head>
 
     <body>
+       
         <!-- Sidebar -->
         <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
             <h3 class="w3-bar-item"></h3>
@@ -59,13 +60,13 @@
                     <div class="form-group">
                         <label for="Category_Name">Category Name</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_Name">
+                        <input type="text" value="<%out.print(request.getParameter("c_id")); %>" class="form-control" id="Category_Name">
                     </div>
                     &nbsp;
                     <div class="form-group">
                         <label for="Category_ID">Category ID</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_ID">
+                        <input type="text" value="<%out.print(request.getParameter("c_name")); %>"class="form-control" id="Category_ID">
                     </div>
                     </br></br>                    
                     <button type="submit" class="btn btn-success">UPDATE</button>
@@ -108,5 +109,6 @@
                 </div>
             </div>
         </div>
+        
     </body>
 </html>                            
