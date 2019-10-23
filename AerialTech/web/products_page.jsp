@@ -81,12 +81,17 @@
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
-                        <%
-                            DBConnection ob = new DBConnection();
-                            ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id=product.c_id");
-                            System.out.print(rs);
-                            if (rs.next()) {
-                        %>
+                         <%
+                                                            
+                                                            
+                                                               DBConnection ob = new DBConnection();
+                                                                ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v.get(4)+"'");
+                                                                
+                                                                System.out.print(rs);
+                                                                if (rs.next()) 
+																{
+
+                                                            %>
                         <tbody>
                             <tr>
                                 <td id="P_id"><%out.print(v.get(0)); %> </td>
@@ -94,8 +99,8 @@
                                 <td id="p_name"><%out.print(v.get(1)); %></td>
                                 <td id="price"><%out.print(v.get(2)); %></td>                                                
                                 <td id="quantity"><%out.print(v.get(2)); %></td>                                                                 
-                                <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                <td >
+                                    <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%=rs.getString(1)%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(2)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>

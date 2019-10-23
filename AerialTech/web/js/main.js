@@ -1,4 +1,5 @@
 var code;
+var valid=false;
 function createCaptcha() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
@@ -28,13 +29,13 @@ function validateCaptcha() {
   event.preventDefault();
   debugger
   if (document.getElementById("cpatchaTextBox").value === code) {
-      response.sendRedirect("../main_page.jsp");
-      
     alert("Valid Captchaaaaaaaaaaaaa");
     
-    return true;
+    valid=true;
   }else{
-    alert("Invalid Captcha. try Again");
-    createCaptcha();
+    
+   // createCaptcha();
+    valid=false;
   }
+  return valid;
 }

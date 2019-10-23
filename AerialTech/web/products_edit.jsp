@@ -59,29 +59,30 @@
             <div class="col-sm-12 col-md-12 text-center">
                 <form class="form-inline">
                     <div class="form-group">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for="Category_Name">Category</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_Name">
+                        <input type="text" value="<%out.print(request.getParameter("category")); %>"  class="form-control" id="Category_Name">
                     </div>
-                    &nbsp;
+                    
                     <div class="form-group">
                         <label for="Category_ID">Product Name</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Product_Name">
+                        <input type="text" value="<%out.print(request.getParameter("p_name")); %>" class="form-control" id="Product_Name">
                     </div>
                 </form>
                 </br>
                 <form class="form-inline">
                     <div class="form-group">
                         <label for="Product_ID">Product ID</label>
-                        &nbsp;
-                        <input type="text" class="form-control" id="Product_ID">
+                        
+                        <input type="text" value="<%out.print(request.getParameter("p_id")); %>" class="form-control" id="Product_ID">
                     </div>
-                    &nbsp;
+                    
                     <div class="form-group">
-                        <label for="Sales_Price">Sales Price</label>
-                        &nbsp;
-                        <input type="text" class="form-control" id="Sales_Price">
+                        <label for="Sales_Price">Sales Price        </label>
+                        
+                        <input type="text" value="<%out.print(request.getParameter("price")); %>" class="form-control" id="Sales_Price">
                     </div>
                 </form>
                 </br>
@@ -90,7 +91,7 @@
                     <div class="form-group">
                         <label for="Available_Quantity">Available Quantity</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Available_Quantity">
+                        <input type="text" value="<%out.print(request.getParameter("quantity")); %>" class="form-control" id="Available_Quantity">
                     </div>
                     </br></br>
                     <button type="submit" class="btn btn-success">UPDATE</button>
@@ -120,12 +121,17 @@
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
-                        <%
-                            DBConnection ob = new DBConnection();
-                            ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id=product.c_id");
-                            System.out.print(rs);
-                            if (rs.next()) {
-                        %>
+                         <%
+                                                            
+                                                            
+                                                               DBConnection ob = new DBConnection();
+                                                                ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v.get(4)+"'");
+                                                                
+                                                                System.out.print(rs);
+                                                                if (rs.next()) 
+																{
+
+                                                            %>
                         <tbody>
                             <tr>
                                 <td id="P_id"><%out.print(v.get(0)); %> </td>

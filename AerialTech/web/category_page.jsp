@@ -1,7 +1,7 @@
 <%-- 
     Document   : Category_List
     Created on : Oct 7, 2019, 8:35:55 AM
-    Author     : TOMIN
+    Author     : TOMIN, 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

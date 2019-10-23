@@ -1,18 +1,23 @@
 <%-- 
-    Document   : Main_Page
-    Created on : Oct 2, 2019, 10:39:54 AM
-    Author     : TOMIN
+    Document   : newjsp
+    Created on : Oct 21, 2019, 11:10:06 AM
+    Author     : mrvis
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.Vector"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="DBConnection.DBConnection"%>
 <%@page import="java.sql.ResultSet"%>
+
 <!DOCTYPE html>
 <html>
-    <head>  
-        <jsp:useBean id="con" class="beanfiles.Category"/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <head>
+  <meta charset="UTF-8">
+  <title>Animated Background Header</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <jsp:useBean id="con" class="beanfiles.Category"/>
         <jsp:useBean id="con2" class="beanfiles.Product"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
@@ -24,7 +29,7 @@
 
         <!-- Main css -->
         <link rel="stylesheet" href="css/style_MainPage.css">
-        
+        <link rel="stylesheet" href="css/style_1.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -33,10 +38,16 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <body>           
-        <!-- Sidebar -->
-        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
+           
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container demo">
+   <div class="content">
+      <div id="large-header" class="large-header">
+         <canvas id="demo-canvas"></canvas>
+         <h1 class="main-title"><span class="thin"><div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
             <h3 class="w3-bar-item"></h3>
             <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
             <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
@@ -50,7 +61,11 @@
                 <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
             </figure>            
             </br></br>
-        </div>        
+        </div>        </span>
+         
+      
+        <!-- Sidebar -->
+        
         
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
@@ -137,8 +152,8 @@
                                 <td id="quantity"><%out.print(v2.get(3)); %></td> 
                                 
                                 
-                                <td  >
-                                 <a href="products_edit.jsp?&p_id=<%out.print(v2.get(0)); %>&p_name=<%out.print(v2.get(1));%>&category=<%=rs.getString(1)%>&price=<%out.print(v2.get(2));%>&quantity=<%out.print(v2.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                      
+                                <td <td onclick="window.location='\products_edit.jsp'">
+                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -155,5 +170,18 @@
         <!-- JS -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="js/main.js"></script>
+    </body>
+</html>
+
+      
+</div>
+<!-- partial -->
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
     </body>
 </html>
