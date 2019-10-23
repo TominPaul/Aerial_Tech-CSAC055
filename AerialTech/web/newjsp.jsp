@@ -47,12 +47,7 @@
    <div class="content">
       <div id="large-header" class="large-header">
          <canvas id="demo-canvas"></canvas>
-         <h1 class="main-title"><span class="thin"><div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
-            <h3 class="w3-bar-item"></h3>
-            <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
-            <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
-            <a href="products_page.jsp" class="w3-bar-item w3-button">Products</a>
-        </div>
+         <h1 class="main-title"><span class="thin">
 
         <!-- Page Content -->
         <div class="w3-container" align="center" style="padding: 2%">
@@ -63,9 +58,15 @@
             </br></br>
         </div>        </span>
          
-      
+       </div>
+        </div>
         <!-- Sidebar -->
-        
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:8%" >
+            <h3 class="w3-bar-item"></h3>
+            <a href="main_page.jsp" class="w3-bar-item w3-button">Home</a>
+            <a href="category_page.jsp" class="w3-bar-item w3-button">Category</a>
+            <a href="products_page.jsp" class="w3-bar-item w3-button">Products</a>
+        </div>
         
 
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
@@ -164,8 +165,7 @@
                         <%}%>
                     </table>                                   
                 </div>
-            </div>
-        </div>
+           
         
         <!-- JS -->
         <script src="vendor/jquery/jquery.min.js"></script>
