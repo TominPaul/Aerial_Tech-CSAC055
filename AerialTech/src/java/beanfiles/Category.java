@@ -61,6 +61,9 @@ public class Category {
             str="select * from category ";
             return  str;
         }
+        else if(opt==2){
+            
+        }
         return "";
     }
 }

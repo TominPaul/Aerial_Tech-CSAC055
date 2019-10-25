@@ -7,12 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.Vector"%>
 <%@page import="java.util.Iterator"%>
+
+<%@page import="DBConnection.DBConnection"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Products_Add</title>    
-	<jsp:useBean id="con" class="beanfiles.Category"/>
+	<jsp:useBean id="con" class="beanfiles.Product"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">       
@@ -50,54 +53,75 @@
             </figure>            
             </br></br>
         </div>        
-
+        <form action="process/productsadd_pr.jsp" method="post">
         <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
             <h2 class="form-title" align="left"><b>Add Product</b></h2>
             <div class="col-sm-12 col-md-12 text-center">
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="form-group">
                         <label for="Category_Name">Category</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_Name">
-                    </div>
-                    &nbsp;
+                         <select name="category" id="category">
+                                                                   
+                                                                     <option value="0"><Category></option>
+                                                                        <%
+                                                                            try {
+                                                                                DBConnection ob = new DBConnection();
+
+                                                                                String qry = "select c_name from category";
+                                                                                ResultSet rs = ob.select(qry);
+                                                                                while (rs.next()) {
+
+                                                                        %>
+                                                                        <option value="<% out.print(rs.getString(1));%>"><% out.print(rs.getString(1));%></option>
+                                                                        <%
+
+                                                                                }
+                                                                            } catch (Exception e) {
+
+                                                                            }
+                                                                        %>
+                                                                      
+                    
+                    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
                     <div class="form-group">
-                        <label for="Category_ID">Product Name</label>
+                        <label for="P_name">Product Name</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Product_Name">
+                        <input type="text" name="p_name" id="p_name" class="form-control" id="Product_Name">
                     </div>
-                </form>
+                </div>
+                
                 </br>
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="form-group">
                         <label for="Product_ID">Product ID</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Product_ID">
+                        <input type="text" name="p_id" id="p_id" class="form-control" id="Product_ID">
                     </div>
                     &nbsp;
                     <div class="form-group">
                         <label for="Sales_Price">Sales Price</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Sales_Price">
+                        <input type="text" id="price" name="price" class="form-control" id="Sales_Price">
                     </div>
-                </form>
+                </div>
                 </br>
-                <form class="form-inline">
+                <div class="form-inline">
                     &nbsp;
                     <div class="form-group">
                         <label for="Available_Quantity">Available Quantity</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Available_Quantity">
+                        <input type="text" id="quantity" name="quantity" class="form-control" id="Available_Quantity">
                     </div>
                     </br></br>
                     <button type="submit" class="btn btn-success">ADD</button>                  
-                </form>
+                </div>
                 </br>
             </div>
             <div class="container">
                 <div class="table-wrapper">
                     <table class="table table-bordered">
-                        <thead>
+                         <thead>
                             <tr>
                                 <th>Product ID</th>
                                 <th>Category</th>
@@ -108,18 +132,22 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <%	
+                         <%	
                             Vector v=null;
-                            Iterator it=con.getData(5).iterator();
+                            Iterator it=con.getData(2).iterator();
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
+                       
                         <tbody>
                             <tr>
-                                <td id="c_id"><%out.print(v.get(0)); %> </td>
-                                <td id="c_name"><%out.print(v.get(1)); %></td>
+                                <td id="P_id"><%out.print(v.get(0)); %> </td>
+                                <td id="category"><%out.print(v.get(4)); %> </td>
+                                <td id="p_name"><%out.print(v.get(1)); %></td>
+                                <td id="price"><%out.print(v.get(2)); %></td>                                                
+                                <td id="quantity"><%out.print(v.get(3)); %></td>                                                                 
                                 <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                     <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -127,10 +155,12 @@
                             </tr>                            
                         </tbody>
                         <%}%>
-                    </table>                    
+                        
+                    </table>             
                 </div>
             </div>
         </div>
+    </form>
     </body>
 </html>
 </html>

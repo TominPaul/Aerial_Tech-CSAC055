@@ -52,53 +52,54 @@
                 <a href="login.jsp" class="right-half" style="width:1%">Logout</a>
             </figure>            
             </br></br>
-        </div>        
-
-        <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
-            <h2 class="form-title" align="left"><b>Edit Product</b></h2>
-            <div class="col-sm-12 col-md-12 text-center">
-                <form class="form-inline">
+        </div>  
+        
+        <form class="form-inline" action="process/products_edit.jsp" method="post">
+            <div align="right" class="form-group form-button" style="margin-right:5%; margin-left:12%">
+                 <h2 class="form-title" align="left"><b>Edit Product</b></h2>
+                <div class="form-inline">
                     <div class="form-group">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for="Category_Name">Category</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("category")); %>"  class="form-control" id="Category_Name">
+                        <input type="text" value="<%out.print(request.getParameter("category")); %>"  class="form-control" id="c_name" name="c_name">
                     </div>
                     
                     <div class="form-group">
                         <label for="Category_ID">Product Name</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("p_name")); %>" class="form-control" id="Product_Name">
+                        <input type="text" value="<%out.print(request.getParameter("p_name")); %>" class="form-control" id="p_name" name="p_name">
                     </div>
-                </form>
+                </div>
                 </br>
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="form-group">
                         <label for="Product_ID">Product ID</label>
                         
-                        <input type="text" value="<%out.print(request.getParameter("p_id")); %>" class="form-control" id="Product_ID">
+                        <input type="text" value="<%out.print(request.getParameter("p_id")); %>" class="form-control" id="p_id" name="p_id">
                     </div>
                     
                     <div class="form-group">
                         <label for="Sales_Price">Sales Price        </label>
                         
-                        <input type="text" value="<%out.print(request.getParameter("price")); %>" class="form-control" id="Sales_Price">
+                        <input type="text" value="<%out.print(request.getParameter("price")); %>" class="form-control" id="p_price" name="p_price">
                     </div>
-                </form>
+                    
+                </div>
                 </br>
-                <form class="form-inline">
+                <div class="form-inline">
                     &nbsp;
                     <div class="form-group">
                         <label for="Available_Quantity">Available Quantity</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("quantity")); %>" class="form-control" id="Available_Quantity">
+                        <input type="text" value="<%out.print(request.getParameter("quantity")); %>" class="form-control" id="p_quantity">
                     </div>
                     </br></br>
                     <button type="submit" class="btn btn-success">UPDATE</button>
                     &nbsp;&nbsp;
                     <button type="submit" class="btn btn-success">CANCEL</button>
                     </br></br>                    
-                </form>
+                </div>
                 </br>
             </div>
             <div class="container">
@@ -121,26 +122,16 @@
                             while(it.hasNext()){
                                 v=(Vector)it.next();
                         %>
-                         <%
-                                                            
-                                                            
-                                                               DBConnection ob = new DBConnection();
-                                                                ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v.get(4)+"'");
-                                                                
-                                                                System.out.print(rs);
-                                                                if (rs.next()) 
-																{
-
-                                                            %>
+                       
                         <tbody>
                             <tr>
                                 <td id="P_id"><%out.print(v.get(0)); %> </td>
-                                <td id="category"><%=rs.getString(1)%></td>
+                                <td id="category"><%out.print(v.get(4)); %> </td>
                                 <td id="p_name"><%out.print(v.get(1)); %></td>
                                 <td id="price"><%out.print(v.get(2)); %></td>                                                
-                                <td id="quantity"><%out.print(v.get(2)); %></td>                                                                 
+                                <td id="quantity"><%out.print(v.get(3)); %></td>                                                                 
                                 <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                     <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(1));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -148,11 +139,13 @@
                             </tr>                            
                         </tbody>
                         <%}%>
-                        <%}%>
-                    </table>                    
+                       
+                    </table>  
+                    
                 </div>
             </div>
         </div>
+ </form>
     </body>
 </html>
 </html>

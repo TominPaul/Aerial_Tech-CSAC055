@@ -77,12 +77,22 @@ public class Product {
 private String generateQuery(int opt){
         String str;
         if(opt==1){  
-            str="insert into product (p_id,p_name,price,quantity,c_id,u_name) "
-                    + "values('"+getP_id()+"','"+getP_name()+"','"+getPrice()+"','"+getQuantity()+"','"+getCategory()+"',admin)";
+            str="insert into product (p_id,p_name,p_price,p_quantity,c_id,u_name) "
+                    + "values('"+getP_id()+"','"+getP_name()+"','"+getPrice()+"','"+getQuantity()+"','"+getCategory()+"','admin')";
+            System.out.println(str);
             return  str;
         }else if(opt==2){  
-            str="select * from product ";
+            str="select * from product";
+              System.out.println(str);
             return  str;
+        }
+        else if(opt==3)
+        {
+            
+              str="update product set p_id='"+getP_id()+"',p_name='"+getP_name()+"',p_price='"
+                       +getPrice()+"',p_quantity='"+getQuantity()+"',c_id='"+getCategory()+"', where p_id="+getP_id()+"";
+              System.out.println(str);
+              return str;
         }
         return "";
     }
