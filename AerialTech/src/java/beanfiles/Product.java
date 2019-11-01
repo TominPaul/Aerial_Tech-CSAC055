@@ -90,10 +90,11 @@ private String generateQuery(int opt){
         {
             
               str="update product set p_id='"+getP_id()+"',p_name='"+getP_name()+"',p_price='"
-                       +getPrice()+"',p_quantity='"+getQuantity()+"',c_id='"+getCategory()+"', where p_id="+getP_id()+"";
+                       +getPrice()+"',p_quantity='"+getQuantity()+"',c_id='"+getCategory()+"' where p_id='"+getP_id()+"'";
               System.out.println(str);
               return str;
         }
+        
         return "";
     }
 }

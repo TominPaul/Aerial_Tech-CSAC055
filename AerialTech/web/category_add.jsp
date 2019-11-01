@@ -59,13 +59,13 @@
                     <div class="form-group">
                         <label for="Category_Name">Category Name</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_Name">
+                        <input type="text" class="form-control" id="Category_Name" name="c_id">
                     </div>
                     &nbsp;
                     <div class="form-group">
                         <label for="Category_ID">Category ID</label>
                         &nbsp;
-                        <input type="text" class="form-control" id="Category_ID">
+                        <input type="text" class="form-control" id="Category_ID" name="c_name">
                     </div>
                     </br></br>
                     <button type="submit" class="btn btn-success">ADD</button>
@@ -95,7 +95,8 @@
                                 <td id="c_id"><%out.print(v.get(0)); %> </td>
                                 <td id="c_name"><%out.print(v.get(1)); %></td>
                                 <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                    
+                                    <a href="category_edit.jsp?&c_id=<%out.print(v.get(0)); %>&c_name=<%out.print(v.get(1)); %>"class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>

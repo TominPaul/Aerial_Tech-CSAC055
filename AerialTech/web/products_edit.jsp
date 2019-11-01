@@ -62,7 +62,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <label for="Category_Name">Category</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("category")); %>"  class="form-control" id="c_name" name="c_name">
+                        <input type="text" value="<%out.print(request.getParameter("category")); %>"  class="form-control" id="c_name" name="category">
                     </div>
                     
                     <div class="form-group">
@@ -82,7 +82,7 @@
                     <div class="form-group">
                         <label for="Sales_Price">Sales Price        </label>
                         
-                        <input type="text" value="<%out.print(request.getParameter("price")); %>" class="form-control" id="p_price" name="p_price">
+                        <input type="text" value="<%out.print(request.getParameter("price")); %>" class="form-control" id="p_price" name="price">
                     </div>
                     
                 </div>
@@ -92,7 +92,7 @@
                     <div class="form-group">
                         <label for="Available_Quantity">Available Quantity</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("quantity")); %>" class="form-control" id="p_quantity">
+                        <input type="text" value="<%out.print(request.getParameter("quantity")); %>" class="form-control" id="quantity" name="quantity">
                     </div>
                     </br></br>
                     <button type="submit" class="btn btn-success">UPDATE</button>

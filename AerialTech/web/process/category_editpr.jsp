@@ -1,6 +1,6 @@
 <%-- 
-    Document   : products_pr
-    Created on : Oct 25, 2019, 8:28:39 AM
+    Document   : category_editpr
+    Created on : Nov 1, 2019, 9:46:49 AM
     Author     : mrvis
 --%>
 
@@ -9,14 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <jsp:useBean id="con" class="beanfiles.Product"/>
+        <jsp:useBean id="con" class="beanfiles.Category"/>
         <jsp:setProperty name="con" property="*"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <%
+        
+         <%
             if(con.putData(3)>0){
-                response.sendRedirect("../products_edit.jsp");
+                response.sendRedirect("../category_edit.jsp");
             }
         %>
     </body>

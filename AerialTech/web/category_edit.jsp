@@ -56,17 +56,17 @@
             <h2 class="form-title" align="left"><b>Edit Category</b></h2>
             
             <div class="col-sm-12 col-md-12 text-center">
-                <form class="form-inline">
+                <form class="form-inline" action="process/category_editpr.jsp" method="post">
                     <div class="form-group">
                         <label for="Category_Name">Category Name</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("c_id")); %>" class="form-control" id="Category_Name">
+                        <input type="text" placeholder="CT1D**" value="<%out.print(request.getParameter("c_id")); %>" class="form-control" id="Category_Name" name="c_id">
                     </div>
                     &nbsp;
                     <div class="form-group">
                         <label for="Category_ID">Category ID</label>
                         &nbsp;
-                        <input type="text" value="<%out.print(request.getParameter("c_name")); %>"class="form-control" id="Category_ID">
+                        <input type="text" placeholder="Category Name" value="<%out.print(request.getParameter("c_name")); %>"class="form-control" id="Category_ID" name="c_name">
                     </div>
                     </br></br>                    
                     <button type="submit" class="btn btn-success">UPDATE</button>
@@ -97,7 +97,7 @@
                                 <td id="c_id"><%out.print(v.get(0)); %> </td>
                                 <td id="c_name"><%out.print(v.get(1)); %></td>
                                 <td>
-                                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
+                                     <a href="category_edit.jsp?&c_id=<%out.print(v.get(0));%>&c_name=<%out.print(v.get(1));%>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                   
                                 </td>
                                 <td>
                                     <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>

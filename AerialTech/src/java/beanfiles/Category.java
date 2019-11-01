@@ -61,7 +61,10 @@ public class Category {
             str="select * from category ";
             return  str;
         }
-        else if(opt==2){
+        else if(opt==3){
+             str="update category set c_id='"+getC_id()+"',c_name='"+getC_name()+"' where c_id='"+getC_id()+"'";
+              System.out.println(str);
+              return str;
             
         }
         return "";
