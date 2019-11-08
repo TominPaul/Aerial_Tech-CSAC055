@@ -100,7 +100,7 @@
                                      <a href="category_edit.jsp?&c_id=<%out.print(v.get(0));%>&c_name=<%out.print(v.get(1));%>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                   
                                 </td>
                                 <td>
-                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                  <a href="/process/category_delete.jsp?&c_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                 </td>
                             </tr>                            
                         </tbody>

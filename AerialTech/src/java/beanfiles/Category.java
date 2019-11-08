@@ -54,8 +54,8 @@ public class Category {
      private String generateQuery(int opt){
         String str;
         if(opt==1){  
-            str="insert into category (c_id,c_name,uname) "
-                    + "values('"+getC_id()+"','"+getC_name()+"',admin)";
+            str="insert into category (c_id,c_name,u_name) "
+                    + "values('"+getC_id()+"','"+getC_name()+"','admin')";
             return  str;
         }else if(opt==2){  
             str="select * from category ";
