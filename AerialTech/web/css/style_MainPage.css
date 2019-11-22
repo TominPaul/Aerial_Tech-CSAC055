@@ -10,51 +10,79 @@ and open the template in the editor.
 
 .left-half {    
     position: absolute;
-    left: 15%;
-    width: 39%;
+    left: 3.5%;       
 }
 
-.right-half {
+.half {
     position: absolute;
-    right: 5%;
+    left: 3.5%;       
+    right: 3.5%;
+}
+.right-half {
+    position: absolute;   
+    right: 3.5%;
+}
+
+caption {
+    text-align: left;
+    margin-left: 7px;
+    color: #fff;
 }
 
 table {
     text-align: center;    
-    margin: 50px auto;
-    border-collapse: collapse;
+    margin: 7px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1.75px solid #0873ba;
     width: 100%;
-    border-radius: .25rem;
+    border-radius: .21rem;    
+    line-height: 40px;           
+}
+
+th {
+    font-weight: 500;
 }
 
 thead tr:first-child {
-    background: #000032;        
-    color: #fff;   
+    background: #0873ba;
+    color: #fff;
+    border: none;
 }
 
-thead th {
-    text-align: center;
-    font-weight: 500;
+tr {
+    background-color: #f2f2f2
+}
+
+thead tr:last-child th {
+    border-bottom: 1.75px solid #ddd;
+}
+
+tbody tr {
+    background-color: #f2f2f2;
+    cursor: default;
+    opacity: 0.7;
 }
 
 tbody tr:hover {
     background-color: #f2f2f2;
     cursor: default;
+    opacity: 1;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tbody tr:last-child td {
+    border: none;    
+}
 
-.button {
-    color: #aaa;
-    cursor: pointer;
-    vertical-align: middle;
-    margin-top: -4px;
+tbody td {
+    border-bottom: 1.75px solid #ddd;    
 }
 
 .edit:hover {
-    color: #000032;
+    color: #0a79df;
 }
 
 .delete:hover {
-    color: #ff0000;
+    color: #dc2a2a;
 }
+        

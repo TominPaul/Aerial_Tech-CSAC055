@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add_Category</title>
+        <title>Add_Product</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
         <meta http-equiv="X-UA-Compatible" content="IE=edge">       
@@ -34,8 +34,8 @@
             </div>
             <ul>
                 <li><a href="index.html"><i class="fa fa-home"></i><em>Home</em></a></li>
-                <li class="wrapper"><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
-                <li><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
+                <li><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
+                <li class="wrapper"><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>
         </nav>
 
@@ -43,7 +43,7 @@
             <div class="slide" id="1">
                 <div class="content first-content">                    
                     <div class="wrapper left-half">
-                        <h3>ADD CATEGORY</h3>
+                        <h3>ADD PRODUCT</h3>
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
@@ -52,48 +52,32 @@
                     </div>                                                                              
                     <form style="width: 100%; margin-top: 35px" class="go-right">                        
                         <div class="left-half" style="width: 250px; left: 24.5%">
-                            <input id="c_name" name="name" type="text" required>
-                            <label for="c_name">Category Name</label>
+                            <input id="p_name" name="name" type="text" required>
+                            <label for="p_name">Product Name</label>
                         </div>                          
                         <div class="right-half" style="width: 250px; right: 24.5%">
-                            <input id="c_id" name="name" type="text" required>
-                            <label for="c_id">Category ID</label>
+                            <input id="p_id" name="name" type="text" required>
+                            <label for="p_id">Product ID</label>
                         </div>                                                   
                     </form>      
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="post">
+                    <form action="post">                             
                         <table>
-                            <caption>Category List</caption>
+                            <caption>Product List</caption>
                             <thead>
                                 <tr>
-                                    <th>Category ID</th>
-                                    <th>Category Name</th>                        
+                                    <th>Product ID</th>
+                                    <th>Category</th>
+                                    <th>Product Name</th>                        
+                                    <th>Sales Price</th>
+                                    <th>Available Quantity</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>CD0001</td>
-                                    <td>Drone</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    </td>
-                                    <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
-                                </tr> 
-                                <tr>
-                                    <td>CD0002</td>
-                                    <td>Drone Accessories</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    </td>
-                                    <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
-                                </tr> 
+
                             </tbody>
                         </table>                                                                       
                     </form>                        

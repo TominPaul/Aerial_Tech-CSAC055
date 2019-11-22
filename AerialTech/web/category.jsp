@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add_Category</title>
+        <title>Category</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
         <meta http-equiv="X-UA-Compatible" content="IE=edge">       
@@ -18,11 +18,10 @@
         <link rel="stylesheet" href="css/templatemo-main.css">
         <link rel="stylesheet" href="css/style_Heading.css">
         <link rel="stylesheet" href="css/style_Buttons.css">
-        <link rel="stylesheet" href="css/style_input.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">    
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
     </head>
     <body>        
         <nav>
@@ -43,26 +42,24 @@
             <div class="slide" id="1">
                 <div class="content first-content">                    
                     <div class="wrapper left-half">
-                        <h3>ADD CATEGORY</h3>
+                        <h3>CATEGORY</h3>
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
                             <p>Log Out</p>
                         </div>
-                    </div>                                                                              
-                    <form style="width: 100%; margin-top: 35px" class="go-right">                        
-                        <div class="left-half" style="width: 250px; left: 24.5%">
-                            <input id="c_name" name="name" type="text" required>
-                            <label for="c_name">Category Name</label>
-                        </div>                          
-                        <div class="right-half" style="width: 250px; right: 24.5%">
-                            <input id="c_id" name="name" type="text" required>
-                            <label for="c_id">Category ID</label>
-                        </div>                                                   
-                    </form>      
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="post">
+                    </div>                                                                                                                                         
+                    <form style="margin-top: 35px" action="post">                              
+                        <span class="bt more-bt">
+                            <a href="category_add.jsp" style="text-decoration: none">
+                                <span class="fl"></span>  
+                                <span class="sfl"></span>
+                                <span class="cross"></span>
+                                <i></i>
+                                add category
+                            </a>                        
+                        </span>                    
+                        <p style="margin-top: 45px"></p> 
                         <table>
                             <caption>Category List</caption>
                             <thead>
@@ -99,9 +96,6 @@
                     </form>                        
                 </div>
             </div>
-        </div>
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="js/main.js"></script>        
+        </div>        
     </body>
 </html>
