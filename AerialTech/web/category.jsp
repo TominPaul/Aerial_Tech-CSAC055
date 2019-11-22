@@ -1,14 +1,17 @@
 <%-- 
-    Document   : category
-    Created on : Oct 30, 2019, 10:35:03 AM
-    Author     : TOMIN
+    Document   : Category_List
+    Created on : Oct 7, 2019, 8:35:55 AM
+    Author     : TOMIN, 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Category</title>
+        <jsp:useBean id="con" class="beanfiles.Category"/>
+        <title>Category</title>        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
         <meta http-equiv="X-UA-Compatible" content="IE=edge">       
@@ -69,29 +72,26 @@
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
-                            </thead>
+                            </thead>                                                    
+                            <%	
+                                Vector v=null;
+                                Iterator it=con.getData(2).iterator();
+                                while(it.hasNext()) {
+                                    v=(Vector)it.next();
+                            %>
                             <tbody>
                                 <tr>
-                                    <td>CD0001</td>
-                                    <td>Drone</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                    <td id="c_id"><%out.print(v.get(0));%></td>
+                                    <td id="c_name"><%out.print(v.get(1));%></td>
+                                    <td>
+                                        <a href="category_edit.jsp?&c_id=<%out.print(v.get(0));%>&c_name=<%out.print(v.get(1));%>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                            
                                     </td>
                                     <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
-                                </tr> 
-                                <tr>
-                                    <td>CD0002</td>
-                                    <td>Drone Accessories</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    </td>
-                                    <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                       <a href="/process/category_delete.jsp?&c_id=<%out.print(v.get(0));%>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                     </td>
                                 </tr> 
                             </tbody>
+                            <%}%>
                         </table>                                                                       
                     </form>                        
                 </div>
