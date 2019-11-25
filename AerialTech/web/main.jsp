@@ -33,7 +33,7 @@
     <body>        
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
+                <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
             </div>
             <div class="mini-logo">                                
             </div>
