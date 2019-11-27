@@ -27,13 +27,13 @@
     <body>        
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
+                <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
             </div>
             <div class="mini-logo">
                 <img src="img/AerialTech_Logo_Mini.png" alt="AerialTech_Logo">
             </div>
             <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i><em>Home</em></a></li>
+                <li><a href="main.jsp"><i class="fa fa-home"></i><em>Home</em></a></li>
                 <li><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
                 <li class="wrapper"><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>
@@ -54,11 +54,25 @@
                         <div class="left-half" style="width: 250px; left: 24.5%">
                             <input id="p_name" name="name" type="text" required>
                             <label for="p_name">Product Name</label>
-                        </div>                          
+                        </div>                                                   
                         <div class="right-half" style="width: 250px; right: 24.5%">
                             <input id="p_id" name="name" type="text" required>
                             <label for="p_id">Product ID</label>
-                        </div>                                                   
+                        </div>
+                        <br><br>
+                        <div class="half" style="width: 250px;">
+                            <input id="c_name" name="name" style="align-items: center" type="text" required>
+                            <label for="c_name">Category</label>
+                        </div>
+                        <br><br>                        
+                        <div class="left-half" style="width: 250px; left: 24.5%">
+                            <input id="s_price" name="name" type="text" required>
+                            <label for="s_price">Sales Price</label>
+                        </div>  
+                        <div class="right-half" style="width: 250px; right: 24.5%">
+                            <input id="quantity" name="name" type="text" required>
+                            <label for="quantity">Available Quantity</label>
+                        </div>  
                     </form>      
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>

@@ -26,13 +26,13 @@
     <body>        
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
+                <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
             </div>
             <div class="mini-logo">
                 <img src="img/AerialTech_Logo_Mini.png" alt="AerialTech_Logo">
             </div>
             <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i><em>Home</em></a></li>
+                <li><a href="main.jsp"><i class="fa fa-home"></i><em>Home</em></a></li>
                 <li><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
                 <li class="wrapper"><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>

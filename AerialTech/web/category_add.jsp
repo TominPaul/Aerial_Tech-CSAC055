@@ -30,13 +30,13 @@
     <body>        
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
+                <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
             </div>
             <div class="mini-logo">
                 <img src="img/AerialTech_Logo_Mini.png" alt="AerialTech_Logo">
             </div>
             <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i><em>Home</em></a></li>
+                <li><a href="main.jsp"><i class="fa fa-home"></i><em>Home</em></a></li>
                 <li class="wrapper"><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
                 <li><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>
@@ -65,7 +65,7 @@
                     </form>      
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="process/categoryadd_pr.jsp" method="post" action="post">
+                    <form action="process/categoryadd_pr.jsp" method="post">
                         <table>
                             <caption>Category List</caption>
                             <thead>
