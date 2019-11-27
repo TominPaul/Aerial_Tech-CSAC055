@@ -11,6 +11,7 @@
 <html>
     <head>
         <jsp:useBean id="con" class="beanfiles.Category"/>
+        
         <title>Category</title>        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
@@ -74,10 +75,10 @@
                                 </tr>
                             </thead>                                                    
                             <%	
-                                Vector v=null;
-                                Iterator it=con.getData(2).iterator();
+                                Vector v = null;
+                                Iterator it = con.getData(2).iterator();
                                 while(it.hasNext()) {
-                                    v=(Vector)it.next();
+                                    v = (Vector)it.next();
                             %>
                             <tbody>
                                 <tr>

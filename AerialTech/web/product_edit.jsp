@@ -51,15 +51,28 @@
                         </div>
                     </div>                                                                              
                     <form style="width: 100%; margin-top: 35px" class="go-right">                        
-                        <div class="left-half" style="width: 250px; left: 24.5%">
+                        <div class="left-half" style="width: 25%; left: 10%">
                             <input id="p_name" name="name" type="text" required>
                             <label for="p_name">Product Name</label>
-                        </div>                          
-                        <div class="right-half" style="width: 250px; right: 24.5%">
+                        </div>                                                   
+                        <div class="right-half" style="width: 25%; right: 10%">
                             <input id="p_id" name="name" type="text" required>
                             <label for="p_id">Product ID</label>
-                        </div>                                                   
-                    </form>      
+                        </div>                        
+                        <div class="half" style="width: 25%; left: 37.5%">
+                            <input id="c_name" name="name" style="align-items: center" type="text" required>
+                            <label for="c_name">Category</label>
+                        </div>
+                        <br><br><br>                        
+                        <div class="left-half" style="width: 25%; left: 23.5%">
+                            <input id="s_price" name="name" type="text" required>
+                            <label for="s_price">Sales Price</label>
+                        </div>  
+                        <div class="right-half" style="width: 25%; right: 23.5%">
+                            <input id="quantity" name="name" type="text" required>
+                            <label for="quantity">Available Quantity</label>
+                        </div>  
+                    </form> 
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">UPDATE</button>
                     <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
                     <form action="post">                             

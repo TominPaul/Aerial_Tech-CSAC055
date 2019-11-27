@@ -18,13 +18,13 @@
     if (rs.next())  {
         session.setAttribute("u_name", rs.getString(1));
         System.out.println(rs);
-        response.sendRedirect("../main_page.jsp");
+        response.sendRedirect("../main.jsp");
     }
     else  {
         %>
         <script>
-            alert("Invalid Login.. try again");
-            window.location="../signup.jsp";
+            alert("Invalid Login.. Try Again.");
+            window.location="../aerial_signup.jsp";
         </script>
         <%
     }                             

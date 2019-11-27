@@ -13,10 +13,9 @@
         <jsp:setProperty name="con" property="*"/>
         <title>JSP Page</title>
     </head>
-    <body>
-        
-         <%
-            if(con.putData(3)>0){
+    <body>        
+        <%
+            if(con.putData(3)>0) {
                 response.sendRedirect("../category_edit.jsp");
             }
         %>

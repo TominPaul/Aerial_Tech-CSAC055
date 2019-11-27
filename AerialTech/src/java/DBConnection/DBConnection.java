@@ -40,8 +40,5 @@ public class DBConnection {
     public ResultSet select(String s) throws SQLException {
         rst = smt.executeQuery(s);
         return rst;
-    }
-    
+    }    
 }
-
-    

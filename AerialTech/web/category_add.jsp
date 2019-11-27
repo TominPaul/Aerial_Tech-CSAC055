@@ -11,6 +11,7 @@
 <html>
     <head>
         <jsp:useBean id="con" class="beanfiles.Category"/>
+        
         <title>Add_Category</title>        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
@@ -53,19 +54,18 @@
                             <p>Log Out</p>
                         </div>
                     </div>                                                                              
-                    <form style="width: 100%; margin-top: 35px" class="go-right">                        
+                    <form style="width: 100%; margin-top: 35px" action="process/categoryadd_pr.jsp" method="post" class="go-right">                        
                         <div class="left-half" style="width: 250px; left: 24.5%">
-                            <input id="c_name" name="name" type="text" required>
-                            <label for="c_name">Category Name</label>
+                            <input id="category_name" name="c_name" type="text" required>
+                            <label for="category_name">Category Name</label>
                         </div>                          
                         <div class="right-half" style="width: 250px; right: 24.5%">
-                            <input id="c_id" name="name" type="text" required>
-                            <label for="c_id">Category ID</label>
-                        </div>                                                   
-                    </form>      
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="process/categoryadd_pr.jsp" method="post">
+                            <input id="category_id" name="c_id" type="text" required>
+                            <label for="category_id">Category ID</label>
+                        </div>   
+                        <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
+                        <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
+                        
                         <table>
                             <caption>Category List</caption>
                             <thead>
@@ -77,10 +77,10 @@
                                 </tr>
                             </thead>
                             <%	
-                                Vector v=null;
-                                Iterator it=con.getData(2).iterator();
+                                Vector v = null;
+                                Iterator it = con.getData(2).iterator();
                                 while(it.hasNext()) {
-                                    v=(Vector)it.next();
+                                    v = (Vector)it.next();
                             %>                           
                             <tbody>
                                 <tr>
