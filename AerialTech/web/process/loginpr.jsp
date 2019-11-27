@@ -23,8 +23,8 @@
     else  {
         %>
         <script>
-            alert("Invalid Login.. try again");
-            window.location="../signup.jsp";
+            alert("Invalid Login.. Try Again.");
+            window.location="../aerial_signup.jsp";
         </script>
         <%
     }                             

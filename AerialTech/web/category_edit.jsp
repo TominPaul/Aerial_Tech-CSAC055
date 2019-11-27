@@ -5,13 +5,17 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <jsp:useBean id="con" class="beanfiles.Category"/>
+        
         <title>Edit_Category</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">                       
         
         <link rel="stylesheet" href="css/fontAwesome.css">    
         <link rel="stylesheet" href="css/style_MainPage.css">   
@@ -50,19 +54,18 @@
                             <p>Log Out</p>
                         </div>
                     </div>                                                                              
-                    <form style="width: 100%; margin-top: 35px" class="go-right">                        
+                    <form style="width: 100%; margin-top: 35px" class="go-right" action="process/category_editpr.jsp" method="post">                        
                         <div class="left-half" style="width: 250px; left: 24.5%">
-                            <input id="c_name" name="name" type="text" required>
-                            <label for="c_name">Category Name</label>
+                            <input id="category_name" name="c_name" type="text" value="<%out.print(request.getParameter("c_name")); %>" required>
+                            <label for="category_name">Category Name</label>
                         </div>                          
                         <div class="right-half" style="width: 250px; right: 24.5%">
-                            <input id="c_id" name="name" type="text" required>
-                            <label for="c_id">Category ID</label>
-                        </div>                                                   
-                    </form>      
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">UPDATE</button>
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="post">                             
+                            <input id="category_id" name="c_id" type="text" value="<%out.print(request.getParameter("c_id")); %>" required>
+                            <label for="category_id">Category ID</label>
+                        </div>   
+                        <button style="margin-top: 63px" type="submit" class="btn btn-success">UPDATE</button>
+                        <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
+                            
                         <table>
                             <caption>Category List</caption>
                             <thead>
@@ -73,28 +76,25 @@
                                     <th>Delete</th>
                                 </tr>
                             </thead>
+                            <%	
+                                Vector v = null;
+                                Iterator it = con.getData(2).iterator();
+                                while(it.hasNext()) {
+                                    v = (Vector)it.next();
+                            %>
                             <tbody>
                                 <tr>
-                                    <td>CD0001</td>
-                                    <td>Drone</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                    <td id="c_id"><%out.print(v.get(0)); %> </td>
+                                    <td id="c_name"><%out.print(v.get(1)); %></td>
+                                    <td>
+                                         <a href="category_edit.jsp?&c_id=<%out.print(v.get(0));%>&c_name=<%out.print(v.get(1));%>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                   
                                     </td>
                                     <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                      <a href="/process/category_delete.jsp?&c_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                     </td>
-                                </tr> 
-                                <tr>
-                                    <td>CD0002</td>
-                                    <td>Drone Accessories</td>                                            
-                                    <td>                                            
-                                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    </td>
-                                    <td>
-                                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
-                                </tr> 
+                                </tr>                                 
                             </tbody>
+                            <%}%>
                         </table>                                                                       
                     </form>                        
                 </div>
