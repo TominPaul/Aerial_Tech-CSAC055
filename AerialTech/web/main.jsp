@@ -24,13 +24,34 @@
         <link rel="stylesheet" href="css/templatemo-main.css">
         <link rel="stylesheet" href="css/style_Heading.css">
         <link rel="stylesheet" href="css/style_Buttons.css">
+        <link rel="stylesheet" href="css/style_Alert.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">    
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     
-    <body>        
+
+                                                <%
+                                                            DBConnection ob=new DBConnection();
+                                                            ResultSet rs2 = ob.select("select u_name from category");
+                                                           
+                                                            while (rs2.next()) {
+                                                               String u_name= request.getParameter("your_pass");
+                                                               System.out.println("Username=:"+u_name);
+                                                            
+
+                                                %>
+    <body>   
+        <%
+                                                   if(u_name!=null)
+                                                   {%>
+                                                      <div class="notify bar-top do-show" data-notification-status="success">Login Successful <% request.getParameter("your_pass");%></div> 
+                                                <% }}
+                                                   %>
+
+    
+       
         <nav>
             <div class="logo">
                 <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
@@ -118,7 +139,7 @@
                                         v2=(Vector)it2.next();
                                 %>
                                 <%                                                                                                                        
-                                    DBConnection ob = new DBConnection();
+                                   
                                     ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v2.get(4)+"'");                                                                
                                     System.out.print(rs);
                                     if (rs.next()) 																
