@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <jsp:useBean id="con" class="beanfiles.Product"/>
+       
         
         <title>Add_Product</title>
         <meta charset="UTF-8">
@@ -92,16 +92,16 @@
                         </div>
                         <br><br><br>                        
                         <div class="left-half" style="width: 25%; left: 10%">
-                            <input id="product_price" name="p_price" type="text" required>
-                            <label for="product_price">Sales Price</label>
+                            <input id="_price" name="p_price" type="text" required>
+                            <label for="price">Sales Price</label>
                         </div>  
                         <div class="half" style="width: 25%; left: 37.5%; margin-top: 21px"> 
                             <button type="submit" class="example_add">Insert</button>
                             <button type="button" class="example_cancel">Cancel</button>  
                         </div>
                         <div class="right-half" style="width: 25%; right: 10%">
-                            <input id="product_quantity" name="p_quantity" type="text" required>
-                            <label for="product_quantity">Available Quantity</label>
+                            <input id="p_quantity" name="p_quantity" type="text" required>
+                            <label for="p_quantity">Available Quantity</label>
                         </div>                      
                         <br><br><br>                    
                         <table>
@@ -132,7 +132,7 @@
                                     <td id="p_price"><%out.print(v.get(2));%></td>                                                
                                     <td id="p_quantity"><%out.print(v.get(3));%></td>                                                              
                                     <td>
-                                         <a href="products_edit.jsp?&p_id=<%out.print(v.get(0));%>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                         <a href="product_edit.jsp?&p_id=<%out.print(v.get(0));%>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                     </td>
                                     <td>
                                         <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0));%>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>

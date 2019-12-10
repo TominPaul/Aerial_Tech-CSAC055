@@ -65,6 +65,7 @@
                             <input id="product_id" name="p_id" value="<%out.print(request.getParameter("p_id"));%>" type="text" required>
                             <label for="product_id">Product ID</label>
                         </div>
+                           
                         <div class="right-half" style="width: 25%; right: 10%">
                             <input id="product_name" name="p_name" value="<%out.print(request.getParameter("p_name"));%>" type="text" required>
                             <label for="product_name">Product Name</label>
@@ -102,6 +103,7 @@
                             <label for="product_quantity">Available Quantity</label>
                         </div>  
                         <br><br><br> 
+                        
                         <table>
                             <caption>Product List</caption>
                             <thead>
@@ -121,6 +123,7 @@
                             while(it.hasNext()) {
                             v = (Vector)it.next();
                             %>
+                              <input type="hidden" id="id" name="id" value="<%out.print(v.get(6)); %>">
                             <tbody>
                                 <tr>
                                     <td id="P_id"><%out.print(v.get(0)); %></td>
@@ -129,7 +132,7 @@
                                     <td id="price"><%out.print(v.get(2)); %></td>                                                
                                     <td id="quantity"><%out.print(v.get(3)); %></td>                                                                 
                                     <td>
-                                         <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(1));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
+                                         <a href="product_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>%>&id=<%out.print(v.get(6)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
                                     </td>
                                     <td>
                                        <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>

@@ -9,7 +9,23 @@ import javax.swing.JOptionPane;
 
 public class Product {
     DbConnection1 con;
-    String p_id, category, p_name, p_price, p_quantity;
+    String p_id, category, p_name, p_price, p_quantity,id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public DbConnection1 getCon() {
+        return con;
+    }
+
+    public void setCon(DbConnection1 con) {
+        this.con = con;
+    }
 
     public String getP_id() {
         return p_id;
@@ -35,21 +51,23 @@ public class Product {
         this.p_name = p_name;
     }
 
-    public String getPrice() {
+    public String getP_price() {
         return p_price;
     }
 
-    public void setPrice(String price) {
-        this.p_price = price;
+    public void setP_price(String p_price) {
+        this.p_price = p_price;
     }
 
-    public String getQuantity() {
+    public String getP_quantity() {
         return p_quantity;
     }
 
-    public void setQuantity(String quantity) {
-        this.p_quantity = quantity;
+    public void setP_quantity(String p_quantity) {
+        this.p_quantity = p_quantity;
     }
+
+    
     
     private void init() {
         try {
@@ -75,7 +93,7 @@ public class Product {
         switch (opt) {
             case 1:
                 str = "insert into product (p_id, p_name, p_price, p_quantity, c_id, u_name)"
-                        + "values('"+getP_id()+"', '"+getP_name()+"', '"+getPrice()+"', '"+getQuantity()+"', '"+getCategory()+"', 'admin')";
+                        + "values('"+getP_id()+"', '"+getP_name()+"', '"+getP_price()+"', '"+getP_quantity()+"', '"+getCategory()+"', 'admin')";
                 System.out.println(str);
                 return  str;
             case 2:
@@ -83,7 +101,7 @@ public class Product {
                 System.out.println(str);
                 return  str;
             case 3:
-                str = "update product set p_id = '"+getP_id()+"', p_name = '"+getP_name()+"', p_price = '"+getPrice()+"', p_quantity = '"+getQuantity()+"', c_id = '"+getCategory()+"' where p_id = '"+getP_id()+"'";
+                str = "update product set p_id = '"+getP_id()+"', p_name = '"+getP_name()+"', p_price = '"+getP_price()+"', p_quantity = '"+getP_quantity()+"', c_id = '"+getCategory()+"' where id = '"+getId()+"'";
                 System.out.println(str);
                 return str;        
             default:

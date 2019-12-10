@@ -30,13 +30,18 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     border: 1.75px solid #0873ba;
-    width: 100%;
+    width: auto;
     border-radius: .21rem;    
-    line-height: 40px;           
+    line-height: 40px;  
+    display:block;
+  
+  overflow: auto;
+  height: 270px;
 }
 
 th {
     font-weight: 500;
+    width:300px;
 }
 
 thead tr:first-child {
