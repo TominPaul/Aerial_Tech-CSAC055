@@ -11,6 +11,7 @@
 <%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
+    <body onload="functions()">
     <head>
         <jsp:useBean id="con" class="beanfiles.Category"/>
         <jsp:useBean id="con2" class="beanfiles.Product"/>
@@ -32,25 +33,33 @@
     </head>
     
 
+    <body>   
+        
+
+    <script>
+        
+function functions() {
+    
                                                 <%
                                                             DBConnection ob=new DBConnection();
                                                             ResultSet rs2 = ob.select("select u_name from category");
                                                            
                                                             while (rs2.next()) {
-                                                               String u_name= request.getParameter("your_pass");
+                                                               String u_name= request.getParameter("u_name");
                                                                System.out.println("Username=:"+u_name);
                                                             
 
                                                 %>
-    <body>   
-        <%
+                                                        
+                                                                                                            <%
                                                    if(u_name!=null)
                                                    {%>
                                                       <div class="notify bar-top do-show" data-notification-status="success">Login Successful <% request.getParameter("your_pass");%></div> 
                                                 <% }}
-                                                   %>
-
-    
+                                            %>  var e= new Notification("Pass");     
+  alert("Page is loaded");
+}
+</script>
        
         <nav>
             <div class="logo">
