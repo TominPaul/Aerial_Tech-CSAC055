@@ -17,7 +17,7 @@
     
     if (rs.next())  {
         session.setAttribute("u_name", rs.getString(1));
-        
+        System.out.println(rs);
         response.sendRedirect("../main.jsp");
     }
     else  {

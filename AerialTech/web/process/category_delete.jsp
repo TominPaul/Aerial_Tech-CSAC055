@@ -18,14 +18,14 @@
             System.out.println(cid);
         
             DbConnection1 db = new DbConnection1();
-            String qry = "delete from category where c_id ='"+cid+"'"; 
+            String qry = "delete from category where c_id = '"+cid+"'"; 
 
             int a = db.putData(qry);
             if(a > 0)
-            {   %>
+            { %>
                 <script>
                     alert('Delete');                        
-                    window.history.back();                    
+                    window.location.replace("../category.jsp");
                 </script>          
         <%  } 
             else  

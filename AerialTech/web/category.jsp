@@ -50,7 +50,7 @@
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
-                            <p>Log Out</p>
+                            <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                                                                                                         
                     <form style="margin-top: 35px" action="post">                              

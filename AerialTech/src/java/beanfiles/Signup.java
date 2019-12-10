@@ -1,29 +1,23 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author mrvis
  */
+
 package beanfiles;
 
 import DBConnection.DbConnection1;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Administrator
- */
 public class Signup {
- String f_name,l_name,u_name,pass,re_pass;
+ String f_name, l_name, u_name, pass, re_pass;
 
-    public String getF_name() {
-        
+    public String getF_name() {        
         return f_name;
     }
 
     public void setF_name(String f_name) {
         this.f_name= f_name;
     }
-
   
     public String getL_name() {
         return l_name;
@@ -32,7 +26,6 @@ public class Signup {
     public void setL_name(String l_name) {
         this.l_name = l_name;
     }
-
     
     public String getU_name() {
         return u_name;
@@ -59,10 +52,10 @@ public class Signup {
     }
  
     private void init(){
-        try{
-            if(con==null)
+        try {
+            if(con == null)
                 con=new DbConnection1();
-        }catch(Exception e){
+        } catch(Exception e) {
             JOptionPane.showMessageDialog(null, "Connection error..");
         }        
     }
@@ -73,21 +66,19 @@ public class Signup {
     }
     
     public Vector getData(int opt){
-            init();
-            return con.getData(generateQuery(opt));
+        init();
+        return con.getData(generateQuery(opt));
     }
     
     private String generateQuery(int opt){
         String qry;
-        if(opt==1){  
-            qry="insert into user(f_name,l_name,u_name,password)"
-                    + "values('" + getF_name() + "','" + getF_name() + "','" + getU_name() + "','" + getPass()+ "')";
-               System.out.println(qry);
-               return qry;
-        
+        if(opt==1) {  
+            qry="insert into user(f_name, l_name, u_name, password)"
+                + "values('"+getF_name()+"', '"+getL_name()+"', '"+getU_name()+"', '"+getPass()+"')";
+            System.out.println(qry);
+            return qry;        
         }
         return "";
     }
-    DbConnection1 con;
- 
+    DbConnection1 con; 
 }

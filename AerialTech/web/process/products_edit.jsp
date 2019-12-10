@@ -9,14 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <jsp:useBean id="con" class="beanfiles.Product"/>
+        <jsp:useBean id="con" class="beanfiles.Product"/>
         <jsp:setProperty name="con" property="*"/>
         <title>JSP Page</title>
     </head>
     <body>
         <%
-            if(con.putData(3)>0){
-                response.sendRedirect("../products_edit.jsp");
+            if(con.putData(3)>0) {
+                response.sendRedirect("../product_edit.jsp");
             }
         %>
     </body>
