@@ -61,7 +61,7 @@
                     <div class="form-group">
                         <label for="Category_Name">Category</label>
                         &nbsp;
-                         <select name="category" id="category">
+                        <select name="category" id="category">
                                                                    
                                                                      <option value="0"><Category></option>
                                                                         <%
