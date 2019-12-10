@@ -11,7 +11,6 @@
 <%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
-    <body onload="functions()">
     <head>
         <jsp:useBean id="con" class="beanfiles.Category"/>
         <jsp:useBean id="con2" class="beanfiles.Product"/>
@@ -25,42 +24,13 @@
         <link rel="stylesheet" href="css/templatemo-main.css">
         <link rel="stylesheet" href="css/style_Heading.css">
         <link rel="stylesheet" href="css/style_Buttons.css">
-        <link rel="stylesheet" href="css/style_Alert.css">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">    
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     
-
-    <body>   
-        
-
-    <script>
-        
-function functions() {
-    
-                                                <%
-                                                            DBConnection ob=new DBConnection();
-                                                            ResultSet rs2 = ob.select("select u_name from category");
-                                                           
-                                                            while (rs2.next()) {
-                                                               String u_name= request.getParameter("u_name");
-                                                               System.out.println("Username=:"+u_name);
-                                                            
-
-                                                %>
-                                                        
-                                                                                                            <%
-                                                   if(u_name!=null)
-                                                   {%>
-                                                      <div class="notify bar-top do-show" data-notification-status="success">Login Successful <% request.getParameter("your_pass");%></div> 
-                                                <% }}
-                                            %>  var e= new Notification("Pass");     
-  alert("Page is loaded");
-}
-</script>
-       
+    <body>        
         <nav>
             <div class="logo">
                 <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>
@@ -68,7 +38,7 @@ function functions() {
             <div class="mini-logo">                                
             </div>
             <ul>
-                <li class="wrapper"><a href="index.html"><i class="fa fa-home "></i><em>Home</em></a></li>
+                <li class="wrapper"><a href="main.jsp"><i class="fa fa-home "></i><em>Home</em></a></li>
                 <li><a href="category.jsp"><i class="fa fa-list"></i><em>Category</em></a></li>                
                 <li><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>
@@ -82,7 +52,7 @@ function functions() {
                     </div>                    
                     <div class="outer right-half">
                         <div class="inner">
-                            <p>Log Out</p>
+                            <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                      
                     <form style="margin-top: 63px" action="post">                                
@@ -148,7 +118,7 @@ function functions() {
                                         v2=(Vector)it2.next();
                                 %>
                                 <%                                                                                                                        
-                                   
+                                    DBConnection ob = new DBConnection();
                                     ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v2.get(4)+"'");                                                                
                                     System.out.print(rs);
                                     if (rs.next()) 																

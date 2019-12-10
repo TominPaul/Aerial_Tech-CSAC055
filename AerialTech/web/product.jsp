@@ -1,13 +1,21 @@
 <%-- 
-    Document   : category
-    Created on : Oct 30, 2019, 10:35:03 AM
+    Document   : Product_List
+    Created on : Oct 7, 2019, 8:35:55 AM
     Author     : TOMIN
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
+
+<%@page import="DBConnection.DBConnection"%>
+<%@page import="java.sql.ResultSet"%>
+
 <!DOCTYPE html>
 <html>
     <head>
+        <jsp:useBean id="con" class="beanfiles.Product"/>
+        
         <title>Product</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
@@ -46,7 +54,7 @@
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
-                            <p>Log Out</p>
+                            <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                          
                     <form style="margin-top: 35px" action="post">                              
@@ -73,9 +81,28 @@
                                     <th>Delete</th>
                                 </tr>
                             </thead>
+                            <%
+                                Vector v = null;
+                                Iterator it = con.getData(2).iterator();
+                                while(it.hasNext()) {
+                                v = (Vector)it.next();
+                            %>                       
                             <tbody>
-
+                                <tr>
+                                    <td id="P_id"><%out.print(v.get(0)); %> </td>
+                                    <td id="category"><%out.print(v.get(4)); %> </td>
+                                    <td id="p_name"><%out.print(v.get(1)); %></td>
+                                    <td id="price"><%out.print(v.get(2)); %></td>                                                
+                                    <td id="quantity"><%out.print(v.get(3)); %></td>
+                                    <td>
+                                         <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(1));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
+                                    </td>
+                                    <td>
+                                       <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>                            
                             </tbody>
+                            <%}%>
                         </table>                                                                       
                     </form>                        
                 </div>

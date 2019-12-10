@@ -457,3 +457,40 @@ p {
   -webkit-transition-duration: 0.6s;
   transition-duration: 0.6s;
 }
+
+/*UPDATE BUTTON*/
+
+.example_add {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #00FF7F;
+    padding: 7px;
+    border: 1.75px solid #00FF7F !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+}
+.example_cancel {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 7px;
+    border: 1.75px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+}
+
+.example_add:hover {
+    color: #ffffff !important;
+    background: #228B22;
+    border-color: #228B22 !important;
+    transition: all 0.4s ease 0s;
+}
+
+.example_cancel:hover {
+    color: #ffffff !important;
+    background: #D3D3D3;
+    border-color: #D3D3D3 !important;
+    transition: all 0.4s ease 0s;
+}

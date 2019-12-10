@@ -15,58 +15,6 @@
                 
         <link rel="stylesheet" href="css/style_login.css">     
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-        <script>                                  
-
-            function validate(){ 
-    var fname = document.forms["form1"]["f_name"];               
-    var lname = document.forms["form1"]["l_name"];    
-    var uname = document.forms["form1"]["u_name"];   
-    var password = document.forms["form1"]["pass"];  
-    var confirm = document.forms["form1"]["re_pass"];  
-   
-    if (fname.value == "")                                  
-    { 
-        window.alert("Please enter your First name."); 
-        fname.focus(); 
-        return false; 
-    } 
-   
-    if (lname.value == "")                               
-    { 
-         window.alert("Please enter your Last name."); 
-        lname.focus(); 
-        return false; 
-    } 
-       
-   
-   
-    if (uname.value == "")                           
-    { 
-        window.alert("Please enter your Username"); 
-        uname.focus(); 
-        return false; 
-    } 
-   
-    if (password.value == "")                        
-    { 
-        window.alert("Please enter your password"); 
-        password.focus(); 
-        return false; 
-    } 
-   
-    if (confirm.value=="")                  
-    { 
-        alert("Enter Password"); 
-        Confirm.focus(); 
-        return false; 
-    } 
-   
-    return true; 
-}</script> 
-
-
-   
-
     </head>
     
     <body onload="createCaptcha()">   
@@ -77,26 +25,26 @@
                     <div class="signup-content">
                         <div class="signup-form">
                             <h2 class="form-title">Sign Up</h2>
-                             <form action="process/signup_pr.jsp" onsubmit="return validate()" method="post" name="form1">
+                             <form action="process/signup_pr.jsp" method="post" name="form1">
                                 <div class="form-group">
                                     <label for="f_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="f_name" id="f_name" pattern="[a-z]{1,15}" placeholder="First Name"/>
+                                    <input type="text" name="f_name" id="f_name" placeholder="First Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="l_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="l_name" id="l_name" pattern="[a-z]{1,15}" placeholder="Last Name"/>
+                                    <input type="text" name="l_name" id="l_name" placeholder="Last Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="u_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="u_name" id="u_name" pattern="[A-Za-z0-9]+" placeholder="User Name"/>
+                                    <input type="text" name="u_name" id="u_name" placeholder="User Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="pass" pattern="[A-Za-z0-9]+" id="pass" placeholder="Password"/>
+                                    <input type="password" name="pass" id="pass" placeholder="Password"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="re_pass" pattern="[A-Za-z0-9]+"id="re_pass" placeholder="Confirm Password"/>
+                                    <input type="password" name="re_pass" id="re_pass" placeholder="Confirm Password"/>
                                 </div>
                                 <div class="form-group">
                                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />

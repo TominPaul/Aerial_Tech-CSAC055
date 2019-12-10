@@ -1,6 +1,6 @@
 <%-- 
-    Document   : category
-    Created on : Oct 30, 2019, 10:35:03 AM
+    Document   : Product_Add
+    Created on : Oct 7, 2019, 10:16:10 AM
     Author     : TOMIN
 --%>
 
@@ -10,9 +10,17 @@
   <jsp:useBean id="con" class="beanfiles.Product"/> 
 <%@page import="DBConnection.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Vector"%>
+<%@page import="java.util.Iterator"%>
+
+<%@page import="DBConnection.DBConnection"%>
+<%@page import="java.sql.ResultSet"%>
+
 <!DOCTYPE html>
 <html>
     <head>
+        <jsp:useBean id="con" class="beanfiles.Product"/>
+        
         <title>Add_Product</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
@@ -43,7 +51,6 @@
                 <li class="wrapper"><a href="product.jsp"><i class="fa fa-product-hunt"></i><em>Products</em></a></li>                
             </ul>
         </nav>
-
         <div class="slides">
             <div class="slide" id="1">
                 <div class="content first-content">                    
@@ -52,53 +59,51 @@
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
-                            <p>Log Out</p>
+                            <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                                              
-                    <form style="width: 100%; margin-top: 35px" class="go-right">                        
+                    <form style="width: 100%; margin-top: 35px" action="process/productsadd_pr.jsp" method="post" class="go-right">                        
                         <div class="left-half" style="width: 25%; left: 10%">
-                            <input id="p_name" name="name" type="text" required>
-                            <label for="p_name">Product Name</label>
-                        </div>                                                   
+                            <input id="product_id" name="p_id" type="text" required>
+                            <label for="product_id">Product ID</label>
+                        </div>
                         <div class="right-half" style="width: 25%; right: 10%">
-                            <input id="p_id" name="name" type="text" required>
-                            <label for="p_id">Product ID</label>
-                        </div>                        
-                        <div class="half" style="width: 25%; left: 37.5%">
-                            <input id="c_name" name="name" style="align-items: center" type="text" required>
-                            <label for="c_name">Category</label>
-                            <select name="category" id="category">
-                                <option value="0">Category</option>
-                                <%
-                                try 
+                            <input id="product_name" name="p_name" type="text" required>
+                            <label for="product_name">Product Name</label>
+                        </div>                                                                           
+                        <div class="half" style="width: 25%; left: 37.5%">                            
+                            <select name="category" id="category" class="select-css">
+                            <option value="0">Category</option>
+                            <%
+                                try
                                 {
                                     DBConnection ob = new DBConnection();
                                     String qry = "select c_name from category";
                                     ResultSet rs = ob.select(qry);
                                     while (rs.next()) {
                                     %>
-                                        <option value="<% out.print(rs.getString(1));%>"><% out.print(rs.getString(1));%></option>
-                                        <%
+                                        <option value = "<%out.print(rs.getString(1));%>"><%out.print(rs.getString(1));%></option>
+                                    <%
                                     }
-                                } 
-                                catch (Exception e) {
+                                } catch (Exception e) {
                                 }
-                                %>
+                            %>
                             </select>
                         </div>
                         <br><br><br>                        
-                        <div class="left-half" style="width: 25%; left: 23.5%">
-                            <input id="s_price" name="name" type="text" required>
-                            <label for="s_price">Sales Price</label>
+                        <div class="left-half" style="width: 25%; left: 10%">
+                            <input id="product_price" name="p_price" type="text" required>
+                            <label for="product_price">Sales Price</label>
                         </div>  
-                        <div class="right-half" style="width: 25%; right: 23.5%">
-                            <input id="quantity" name="name" type="text" required>
-                            <label for="quantity">Available Quantity</label>
-                        </div>  
-                    </form>      
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
-                    <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
-                    <form action="post">                             
+                        <div class="half" style="width: 25%; left: 37.5%; margin-top: 21px"> 
+                            <button type="submit" class="example_add">Insert</button>
+                            <button type="button" class="example_cancel">Cancel</button>  
+                        </div>
+                        <div class="right-half" style="width: 25%; right: 10%">
+                            <input id="product_quantity" name="p_quantity" type="text" required>
+                            <label for="product_quantity">Available Quantity</label>
+                        </div>                      
+                        <br><br><br>                    
                         <table>
                             <caption>Product List</caption>
                             <thead>
@@ -112,33 +117,30 @@
                                     <th>Delete</th>
                                 </tr>
                             </thead>
-                             <%	
-                            Vector v=null;
-                            Iterator it=con.getData(2).iterator();
-                            while(it.hasNext()){
-                                v=(Vector)it.next();
-                        %>
-                       
-                        <tbody>
-                            <tr>
-                                <td id="P_id"><%out.print(v.get(0)); %> </td>
-                                <td id="category"><%out.print(v.get(4)); %> </td>
-                                <td id="p_name"><%out.print(v.get(1)); %></td>
-                                <td id="price"><%out.print(v.get(2)); %></td>                                                
-                                <td id="quantity"><%out.print(v.get(3)); %></td>                                                                 
-                                <td>
-                                     <a href="products_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(1));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
-                                </td>
-                                <td>
-                                   <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                
-                                </td>
-                            </tr>                            
-                        </tbody>
-                        <%}%>
-                       
-                    </table>  
-                                                                                               
+                            <%	
+                                Vector v = null;
+                                Iterator it = con.getData(2).iterator();
+                                while(it.hasNext()) {
+                                v = (Vector)it.next();
+                            %>
+
+                            <tbody>
+                                <tr>
+                                    <td id="p_id"><%out.print(v.get(0));%></td>
+                                    <td id="p_category"><%out.print(v.get(4));%></td>
+                                    <td id="p_name"><%out.print(v.get(1));%></td>
+                                    <td id="p_price"><%out.print(v.get(2));%></td>                                                
+                                    <td id="p_quantity"><%out.print(v.get(3));%></td>                                                              
+                                    <td>
+                                         <a href="products_edit.jsp?&p_id=<%out.print(v.get(0));%>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                    </td>
+                                    <td>
+                                        <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0));%>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>                            
+                            </tbody>
+                            <%}%>
+                        </table>                                                                       
                     </form>                        
                 </div>
             </div>

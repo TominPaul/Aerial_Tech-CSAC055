@@ -51,20 +51,21 @@
                     </div>
                     <div class="outer right-half">
                         <div class="inner">
-                            <p>Log Out</p>
+                            <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                                              
                     <form style="width: 100%; margin-top: 35px" action="process/categoryadd_pr.jsp" method="post" class="go-right">                        
                         <div class="left-half" style="width: 250px; left: 24.5%">
-                            <input id="category_name" name="c_name" type="text" required>
-                            <label for="category_name">Category Name</label>
-                        </div>                          
-                        <div class="right-half" style="width: 250px; right: 24.5%">
                             <input id="category_id" name="c_id" type="text" required>
                             <label for="category_id">Category ID</label>
-                        </div>   
-                        <button style="margin-top: 63px" type="submit" class="btn btn-success">ADD</button>
-                        <button style="margin-top: 63px" type="submit" class="btn btn-success">CANCEL</button>
+                        </div> 
+                        <div class="right-half" style="width: 250px; right: 24.5%">
+                            <input id="category_name" name="c_name" type="text" required>
+                            <label for="category_name">Category Name</label>
+                        </div>
+                        <br><br><br>
+                        <button type="submit" class="example_add">Insert</button>
+                        <button type="button" class="example_cancel">Cancel</button>                        
                         
                         <table>
                             <caption>Category List</caption>
