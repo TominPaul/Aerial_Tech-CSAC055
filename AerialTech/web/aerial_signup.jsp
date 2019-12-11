@@ -72,26 +72,26 @@
                     <div class="signup-content">
                         <div class="signup-form">
                             <h2 class="form-title">Sign Up</h2>
-                             <form action="process/signup_pr.jsp" method="post" name="form1">
+                             <form action="process/signup_pr.jsp" onsubmit="return validate()" method="post" name="form1">
                                 <div class="form-group">
                                     <label for="f_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="f_name" id="f_name" placeholder="First Name"/>
+                                  <input type="text" name="f_name" id="f_name" pattern="[a-z]{1,15}" placeholder="First Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="l_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="l_name" id="l_name" placeholder="Last Name"/>
+                                    <input type="text" name="l_name" id="l_name" pattern="[a-z]{1,15}" placeholder="Last Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="u_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="u_name" id="u_name" placeholder="User Name"/>
+                                  <input type="text" name="u_name" id="u_name" pattern="[A-Za-z0-9]+" placeholder="User Name"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                      <input type="password" name="pass" pattern="[A-Za-z0-9]+" id="pass" placeholder="Password"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="re_pass" id="re_pass" placeholder="Confirm Password"/>
+                                   <input type="password" name="re_pass" pattern="[A-Za-z0-9]+"id="re_pass" placeholder="Confirm Password"/>
                                 </div>
                                 <div class="form-group">
                                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />

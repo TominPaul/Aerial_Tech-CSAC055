@@ -60,7 +60,7 @@
                             <a href="aerial_login.jsp"><p>Log Out</p></a>
                         </div>
                     </div>                                                                              
-                    <form style="width: 100%; margin-top: 35px" action="process/products_edit.jsp" method="post" class="go-right">                        
+                    <form style="width: 100%; margin-top: 35px" action="product_edit.jsp" method="post" class="go-right">                        
                         <div class="left-half" style="width: 25%; left: 10%">
                             <input id="product_id" name="p_id" value="<%out.print(request.getParameter("p_id"));%>" type="text" required>
                             <label for="product_id">Product ID</label>
@@ -72,7 +72,7 @@
                         </div>                                                                
                         <div class="half" style="width: 25%; left: 37.5%">                            
                             <select name="category_name" name="category" id="c_id" class="select-css">
-                            <option value="0">Category</option>
+                            <option value="<%out.print(request.getParameter("category"));%>">Category</option>
                             <%
                                 try
                                 {
