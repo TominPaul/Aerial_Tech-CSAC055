@@ -71,7 +71,7 @@
                             <label for="product_name">Product Name</label>
                         </div>                                                                
                         <div class="half" style="width: 25%; left: 37.5%">                            
-                            <select name="category_name" id="c_name" class="select-css">
+                            <select name="category_name" name="category" id="c_id" class="select-css">
                             <option value="0">Category</option>
                             <%
                                 try
@@ -81,7 +81,7 @@
                                     ResultSet rs = ob.select(qry);
                                     while (rs.next()) {
                                     %>
-                                        <option value = "<%out.print(request.getParameter("category"));%>"><%out.print(rs.getString(1));%></option>
+                                        <option   value = "<%out.print(request.getParameter("category"));%>"><%out.print(rs.getString(1));%></option>
                                     <%
                                     }
                                 } catch (Exception e) {

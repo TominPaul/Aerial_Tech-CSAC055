@@ -119,7 +119,7 @@
                                 %>
                                 <%                                                                                                                        
                                     DBConnection ob = new DBConnection();
-                                    ResultSet rs = ob.select("SELECT c_name FROM category,product WHERE category.c_id='"+v2.get(4)+"'");                                                                
+                                    ResultSet rs = ob.select("SELECT c_id FROM product WHERE c_id='"+v2.get(4)+"'");                                                                
                                     System.out.print(rs);
                                     if (rs.next()) 																
                                     {
