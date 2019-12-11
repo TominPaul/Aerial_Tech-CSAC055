@@ -30,7 +30,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     
-    <body>        
+    <body>     
+        <% session.getAttribute("uname");%>
         <nav>
             <div class="logo">
                 <a href="main.jsp"><img src="img/AerialTech_Logo.png" alt="AerialTech_Logo"></a>

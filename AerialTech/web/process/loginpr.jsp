@@ -5,7 +5,11 @@
 --%>
 
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.Vector"%>
 <%@page import="java.sql.ResultSet"%>
+<jsp:useBean id="con" class="beanfiles.Category"/>
+        <jsp:useBean id="con2" class="beanfiles.Product"/>
 <%@page import="DBConnection.DBConnection"%>
 <%
     DBConnection ob = new DBConnection();
@@ -18,7 +22,15 @@
     if (rs.next())  {
         session.setAttribute("u_name", rs.getString(1));
         System.out.println(rs);
+        	
+                                    Vector v=null;
+                                    Iterator it=con.getData(2).iterator();
+                                    Iterator it2=con2.getData(2).iterator();
+                                    if(it.hasNext()&&it2.hasNext())
         response.sendRedirect("../main.jsp");
+                                    else
+                                         response.sendRedirect("../main2.jsp");
+                                        
     }
     else  {
         %>

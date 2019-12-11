@@ -16,7 +16,54 @@
         <link rel="stylesheet" href="css/style_login.css">     
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     </head>
-    
+     <script>                                  
+
+            function validate(){ 
+    var fname = document.forms["form1"]["f_name"];               
+    var lname = document.forms["form1"]["l_name"];    
+    var uname = document.forms["form1"]["u_name"];   
+    var password = document.forms["form1"]["pass"];  
+    var confirm = document.forms["form1"]["re_pass"];  
+   
+    if (fname.value == "")                                  
+    { 
+        window.alert("Please enter your First name."); 
+        fname.focus(); 
+        return false; 
+    } 
+   
+    if (lname.value == "")                               
+    { 
+         window.alert("Please enter your Last name."); 
+        lname.focus(); 
+        return false; 
+    } 
+       
+   
+   
+    if (uname.value == "")                           
+    { 
+        window.alert("Please enter your Username"); 
+        uname.focus(); 
+        return false; 
+    } 
+   
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+   
+    if (confirm.value=="")                  
+    { 
+        alert("Enter Password"); 
+        Confirm.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}</script> 
     <body onload="createCaptcha()">   
         <div class="main">
             <!-- Sign up form -->
