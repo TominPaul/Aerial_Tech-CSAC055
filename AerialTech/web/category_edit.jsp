@@ -68,9 +68,16 @@
                             <input id="category_id" name="c_id" type="text" value="<%out.print(request.getParameter("c_id")); %>" required>
                             <label for="category_id">Category ID</label>
                         </div>   
+<<<<<<< Updated upstream
                      <br><br><br>
                         <button type="submit" class="example_add">UPDATE</button>
                         <button type="button" class="example_cancel">Cancel</button>    
+=======
+                         <div class="half" style="width: 25%; left: 37.5%; margin-top: 21px"> 
+                            <button type="submit" class="example_add">Update</button>
+                            <button type="button" class="example_cancel">Cancel</button>  
+                        
+>>>>>>> Stashed changes
                         <table>
                             <caption>Category List</caption>
                             <thead>

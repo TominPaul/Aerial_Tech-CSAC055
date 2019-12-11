@@ -19,7 +19,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< Updated upstream
        
+=======
+        
+>>>>>>> Stashed changes
         
         <title>Add_Product</title>
         <meta charset="UTF-8">
@@ -92,8 +96,13 @@
                         </div>
                         <br><br><br>                        
                         <div class="left-half" style="width: 25%; left: 10%">
+<<<<<<< Updated upstream
                             <input id="_price" name="p_price" type="text" required>
                             <label for="price">Sales Price</label>
+=======
+                            <input id="product_price" name="p_price" type="text" required>
+                            <label name="p_price" for="product_price">Sales Price</label>
+>>>>>>> Stashed changes
                         </div>  
                         <div class="half" style="width: 25%; left: 37.5%; margin-top: 21px"> 
                             <button type="submit" class="example_add">Insert</button>

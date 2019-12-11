@@ -11,7 +11,12 @@
             <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/category_edit.jsp</file>
             <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/process/products_edit.jsp</file>
             <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/category_add.jsp</file>
+<<<<<<< Updated upstream
             <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/src/java/beanfiles/Product.java</file>
+=======
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/product_add.jsp</file>
+            <file>file:/D:/EDUCATION/WIL_Project/Project/AerialTech/web/product_edit.jsp</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

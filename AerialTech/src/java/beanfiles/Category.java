@@ -9,7 +9,7 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 
 public class Category   {
-    String c_id, c_name;
+    String c_id, c_name,id;
     DbConnection1 con;
 
     public String getC_id() {
@@ -26,7 +26,25 @@ public class Category   {
 
     public void setC_name(String c_name) {
         this.c_name = c_name;
-    }    
+    }  
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public DbConnection1 getCon() {
+        return con;
+    }
+
+    public void setCon(DbConnection1 con) {
+        this.con = con;
+    }
+
+ 
+    //DbConnection1 con;
     
     private void init() {
         try {
@@ -59,7 +77,7 @@ public class Category   {
                 str = "select * from category";
                 return  str;
             case 3:
-                str = "update category set c_id = '"+getC_id()+"', c_name='"+getC_name()+"' where c_id = '"+getC_id()+"'";
+                str = "update category set c_id = '"+getC_id()+"', c_name='"+getC_name()+"' where c_id = '"+getId()+"'";
                 System.out.println(str);
                 return str;
             default:            

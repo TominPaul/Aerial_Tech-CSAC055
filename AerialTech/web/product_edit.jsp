@@ -132,7 +132,11 @@
                                     <td id="price"><%out.print(v.get(2)); %></td>                                                
                                     <td id="quantity"><%out.print(v.get(3)); %></td>                                                                 
                                     <td>
+<<<<<<< Updated upstream
                                          <a href="product_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>%>&id=<%out.print(v.get(6)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
+=======
+                                         <a href="product_edit.jsp?&p_id=<%out.print(v.get(0)); %>&p_name=<%out.print(v.get(1));%>&category=<%out.print(v.get(4));%>&price=<%out.print(v.get(2));%>&quantity=<%out.print(v.get(3)); %>"  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>                                                                 
+>>>>>>> Stashed changes
                                     </td>
                                     <td>
                                        <a href="/process/product_delete.jsp?&p_id=<%out.print(v.get(0)); %> " class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
